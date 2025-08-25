@@ -1,5 +1,3 @@
-import Image from 'next/image'
-import { IconFlagPoland } from '@/components/icons/flags/IconFlagPoland'
 import { IconHugeBluesky } from '@/components/icons/huge/IconHugeBluesky'
 import { IconHugeBookmark01 } from '@/components/icons/huge/IconHugeBookmark01'
 import { IconHugeLinkedIn01 } from '@/components/icons/huge/IconHugeLinkedIn01'
@@ -25,9 +23,9 @@ import { LogoSupabase } from '@/components/logos/tech/LogoSupabase'
 import { LogoTailwind } from '@/components/logos/tech/LogoTailwind'
 import { LogoTurborepo } from '@/components/logos/tech/LogoTurborepo'
 import { LogoTypescript } from '@/components/logos/tech/LogoTypescript'
+import { HomeHero } from '@/components/pages/home/HomeHero'
 import { ProjectCard } from '@/components/ProjectCard'
 import { SectionHeader } from '@/components/SectionHeader'
-import { BaseButton } from '@/components/ui/BaseButton'
 import { links } from '@/data/links'
 import type { Metadata } from 'next'
 import type { ProjectStatusType } from '@/types/ProjectStatusType'
@@ -176,58 +174,7 @@ const socialLinks = [
 export default function Page() {
   return (
     <>
-      {/* Hero */}
-      <section>
-        <Image
-          className="mb-4 size-11 rounded-full"
-          src="/avatar.png"
-          alt="Andrei Hudovich"
-          width={44}
-          height={44}
-        />
-
-        <h1 className="mb-4 font-sans font-semibold text-[1.375rem] leading-7 tracking-[0.02em]">
-          Hey, I&apos;m{' '}
-          <span className="border-b-[0.09375rem] border-current text-accent">Andrei Hudovich</span>!
-        </h1>
-
-        <div className="mb-5 text-md space-y-1.75">
-          <p>
-            A freelance full stack engineer based in Wroclaw,{' '}
-            <span className="inline-flex items-center gap-1.5">
-              Poland
-              <IconFlagPoland className="shrink-0 w-3 h-[0.5625rem] rounded-xs drop-shadow-[0px_0px_1px_rgba(0,0,0,0.1)]" />
-            </span>
-          </p>
-
-          <p>
-            I specialize on building web applications with{' '}
-            <span className="inline-block bg-[#58C4DC]/10 rounded-md px-2 py-px">
-              <LogoReact className="inline-block mr-1.75 -mt-0.75 size-3.5" />
-              React ecosystem
-            </span>
-          </p>
-
-          <p>Have an exciting idea? I can help you bring it to life!</p>
-        </div>
-
-        <div className="flex items-center gap-4">
-          <BaseButton className="min-w-33" hotkey="B" variant="primary" asChild>
-            <a href={links.calcom} target="_blank">
-              Book a call
-            </a>
-          </BaseButton>
-
-          <BaseButton hotkey="E" variant="secondary" asChild>
-            <a href={`mailto:${links.email}`}>Email me</a>
-          </BaseButton>
-        </div>
-
-        <p className="relative mt-4 pl-5 text-xs text-tertiary">
-          <span className="absolute left-0 top-1/2 size-3.5 -translate-y-1/2 rounded-full bg-green-500 border-4 border-green-100" />
-          Available for new projects, let&apos;s talk!
-        </p>
-      </section>
+      <HomeHero />
 
       {/* Tech stack */}
       <section>

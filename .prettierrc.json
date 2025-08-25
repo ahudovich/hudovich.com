@@ -8,14 +8,14 @@
   "importOrderTypeScriptVersion": "5.0.0",
   "importOrder": [
     "<BUILTIN_MODULES>",
-    "^react",
     "^next",
+    "^react",
     "<THIRD_PARTY_MODULES>",
     "^@/env",
     "^@/",
     "^[.]",
-    "<TYPES>^react$",
     "<TYPES>^next$",
+    "<TYPES>^react$",
     "<TYPES>",
     "<TYPES>^@/",
     "<TYPES>^[.]"
