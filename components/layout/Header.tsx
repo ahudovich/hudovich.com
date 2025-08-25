@@ -1,8 +1,9 @@
 import { Logo } from '@/components/Logo'
+import { cn } from '@/utils/css'
 
-export function Header() {
+export function Header({ className }: { className?: string }) {
   return (
-    <header className="group flex items-center mx-auto px-8 max-w-[80rem] h-16">
+    <header className={cn('group flex items-center mx-auto max-w-[80rem] h-16', className)}>
       <div className="flex items-center gap-1 overflow-hidden">
         <span className="relative z-[1] shrink-0 bg-white">
           <Logo className="size-5 fill-accent" />

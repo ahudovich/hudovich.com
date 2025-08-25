@@ -1,10 +1,16 @@
 import { IconHugeFavourite } from '@/components/icons/huge/IconHugeFavourite'
 import { IconHugeGitFork } from '@/components/icons/huge/IconHugeGitFork'
 import { links } from '@/data/links'
+import { cn } from '@/utils/css'
 
-export function Footer() {
+export function Footer({ className }: { className?: string }) {
   return (
-    <footer className="sticky top-[100vh] flex items-center justify-between gap-8 mx-auto px-8 pt-8 pb-6 max-w-[80rem]">
+    <footer
+      className={cn(
+        'sticky top-[100vh] flex items-center justify-between gap-8 mx-auto pt-8 pb-6 max-w-[80rem]',
+        className
+      )}
+    >
       <p className="group flex items-center gap-1.5 text-xs text-tertiary">
         <span>&copy; {new Date().getFullYear()} Built with</span>
         <IconHugeFavourite className="shrink-0 size-3 stroke-red-600 fill-red-600 transition-transform duration-300 group-hover:scale-120" />
