@@ -1,0 +1,55 @@
+{
+  "name": "hudovich.com",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.14.0+sha512.ad27a79641b49c3e481a16a805baa71817a04bbe06a38d17e60e2eaee83f6a146c6a688125f5792e48dd5ba30e7da52a5cda4c3992b9ccf333f9ce223af84748",
+  "engines": {
+    "node": "24"
+  },
+  "author": {
+    "name": "Andrei Hudovich",
+    "email": "andrei@hudovich.com"
+  },
+  "homepage": "https://hudovich.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AndreiHudovich/hudovich.com"
+  },
+  "scripts": {
+    "prepare": "husky",
+    "clean": "git clean -xdf .next node_modules",
+    "start": "next start",
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write ."
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "next": "15.4.6",
+    "radix-ui": "^1.4.2",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "tailwind-merge": "^3.3.1",
+    "tailwind-variants": "^2.1.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@ianvs/prettier-plugin-sort-imports": "^4.6.1",
+    "@tailwindcss/postcss": "^4.1.11",
+    "@types/node": "^24.2.1",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "eslint": "^9.33.0",
+    "eslint-config-next": "^15.4.6",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.5",
+    "prettier": "^3.6.2",
+    "tailwindcss": "^4.1.11",
+    "typescript": "^5.9.2"
+  }
+}

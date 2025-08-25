@@ -1,0 +1,14 @@
+export function LogoProjectListingCat({ ...props }: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" {...props}>
+      <path
+        fill="#09090B"
+        d="M6.597 4.708 2.4 7.505V2.2a.7.7 0 0 1 1.194-.494zm2.798 0 4.196 2.797V2.2a.7.7 0 0 0-1.194-.494z"
+      />
+      <path
+        fill="#09090B"
+        d="M2.4 4.708v4.196a5.596 5.596 0 0 0 11.191 0V4.708zm3.148 4.896a1.05 1.05 0 1 1 0-2.098 1.05 1.05 0 0 1 0 2.098m5.246 0a1.05 1.05 0 1 1 0-2.099 1.05 1.05 0 0 1 0 2.099"
+      />
+    </svg>
+  )
+}

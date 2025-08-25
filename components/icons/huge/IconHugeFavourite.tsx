@@ -1,0 +1,7 @@
+export function IconHugeFavourite({ ...props }: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" {...props}>
+      <path d="M6.94 13.312C5.06 11.905 1.333 8.69 1.333 5.796c0-1.912 1.404-3.463 3.334-3.463 1 0 2 .334 3.333 1.667 1.333-1.333 2.333-1.667 3.333-1.667 1.93 0 3.334 1.55 3.334 3.463 0 2.894-3.727 6.11-5.607 7.516a1.76 1.76 0 0 1-2.12 0" />
+    </svg>
+  )
+}
