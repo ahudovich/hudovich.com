@@ -23,7 +23,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="h-full">
       <body
-        className={`${geist.variable} ${geistMono.variable} px-8 h-full font-mono text-md text-primary antialiased`}
+        className={`${geist.variable} ${geistMono.variable} px-4 h-full font-mono text-md text-primary antialiased sm:px-8`}
       >
         <Header />
         <main>{children}</main>

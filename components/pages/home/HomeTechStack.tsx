@@ -39,10 +39,6 @@ const techStack = [
     icon: LogoTypescript,
   },
   {
-    label: 'BetterAuth',
-    icon: LogoBetterAuth,
-  },
-  {
     label: 'Node',
     icon: LogoNode,
   },
@@ -53,6 +49,10 @@ const techStack = [
   {
     label: 'Nest',
     icon: LogoNest,
+  },
+  {
+    label: 'BetterAuth',
+    icon: LogoBetterAuth,
   },
   {
     label: 'Supabase',

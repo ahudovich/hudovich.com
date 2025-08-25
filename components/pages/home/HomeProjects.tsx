@@ -39,13 +39,13 @@ const projects: Array<Project> = [
 
 export function HomeProjects() {
   return (
-    <section>
+    <section className="@container/projects">
       <SectionHeader
         heading="Projects"
         text="These are my personal projects, both past and ongoing:"
       />
 
-      <ul className="grid grid-cols-2 gap-3">
+      <ul className="grid gap-3 @lg/projects:grid-cols-2">
         {projects.map((project) => (
           <li key={project.name}>
             <ProjectCard {...project} />

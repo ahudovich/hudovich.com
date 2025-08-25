@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <div className="mx-auto py-10 max-w-[40rem] space-y-12">
+    <div className="mx-auto pt-6 pb-12 max-w-[40rem] space-y-12 sm:py-10">
       <HomeHero />
       <HomeTechStack />
       <HomeProjects />

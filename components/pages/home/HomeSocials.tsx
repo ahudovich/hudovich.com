@@ -42,9 +42,12 @@ const socialLinks = [
 export function HomeSocials() {
   return (
     <section>
-      <SectionHeader heading="Find me on" text="You can find me on the following platforms:" />
+      <SectionHeader
+        heading="Find me on"
+        text="You can find me on the following social platforms:"
+      />
 
-      <ul className="flex items-center gap-2.5">
+      <ul className="flex flex-wrap items-center gap-2.5">
         {socialLinks.map((link) => (
           <li className="group" key={link.label}>
             <a

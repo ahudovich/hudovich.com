@@ -12,6 +12,7 @@ export function HomeHero() {
         alt="Andrei Hudovich"
         width={44}
         height={44}
+        draggable={false}
       />
 
       <h1 className="mb-4 font-sans font-semibold text-[1.375rem] leading-7 tracking-[0.02em]">
@@ -19,24 +20,26 @@ export function HomeHero() {
         <span className="border-b-[0.09375rem] border-current text-accent">Andrei Hudovich</span>!
       </h1>
 
-      <div className="mb-5 text-md space-y-1.75">
+      <div className="mb-5 text-md leading-[1.75] space-y-1.75">
         <p>
-          A freelance full stack engineer based in Wroclaw,{' '}
-          <span className="inline-flex items-center gap-1.5">
-            Poland
-            <IconFlagPoland className="shrink-0 w-3 h-[0.5625rem] rounded-xs drop-shadow-[0px_0px_1px_rgba(0,0,0,0.1)]" />
+          <span className="sm:inline-block sm:mb-1.75">
+            A freelance full-stack engineer based in Wroclaw,{' '}
+            <span className="sm:hidden">Poland. </span>
+            <span className="hidden sm:inline-flex sm:items-center sm:gap-1.5">
+              Poland
+              <IconFlagPoland className="shrink-0 w-3 h-[0.5625rem] rounded-xs drop-shadow-[0_0_1px_rgba(0,0,0,0.1)]" />
+            </span>
           </span>
-        </p>
-
-        <p>
-          I specialize on building web applications with{' '}
-          <span className="inline-block bg-[#58C4DC]/10 rounded-md px-2 py-px">
+          <br className="hidden sm:block" />
+          I&nbsp;specialize in building web applications with{' '}
+          <span className="inline-block bg-[#58C4DC]/10 rounded-md px-1.75">
             <LogoReact className="inline-block mr-1.75 -mt-0.75 size-3.5" />
-            React ecosystem
-          </span>
+            React
+          </span>{' '}
+          ecosystem.
         </p>
 
-        <p>Have an exciting idea? I can help you bring it to life!</p>
+        <p>If you need a reliable developer to build your product, I&apos;m here to help.</p>
       </div>
 
       <HomeHeroActions />

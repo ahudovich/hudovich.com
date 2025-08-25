@@ -7,7 +7,7 @@ export function HomeContact() {
       <SectionHeader heading="Get in touch" />
 
       <p className="mb-1.5">
-        You can reach me anytime at{' '}
+        You can reach me <span className="hidden xs:inline">anytime</span> at{' '}
         <a
           className="group inline-flex items-center gap-1 font-medium text-primary"
           href={`mailto:${links.email}`}
@@ -18,7 +18,7 @@ export function HomeContact() {
         </a>
       </p>
 
-      <p className="mb-1.5">
+      <p>
         Or book a call on{' '}
         <a
           className="group inline-flex items-center gap-1 font-medium text-primary"
