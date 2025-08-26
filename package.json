@@ -14,7 +14,7 @@
   "homepage": "https://hudovich.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AndreiHudovich/hudovich.com"
+    "url": "https://github.com/ahudovich/hudovich.com"
   },
   "scripts": {
     "prepare": "husky",
