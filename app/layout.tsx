@@ -1,8 +1,8 @@
 import '@/app/globals.css'
 import { Geist, Geist_Mono } from 'next/font/google'
+import { env } from '@/env'
 import { Footer } from '@/components/layout/Footer'
 import { Header } from '@/components/layout/Header'
-import { links } from '@/data/links'
 import type { Metadata } from 'next'
 
 const geist = Geist({
@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL(links.baseUrl),
+  metadataBase: new URL(env.NEXT_PUBLIC_BASE_URL),
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {

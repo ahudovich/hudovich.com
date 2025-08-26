@@ -1,5 +1,4 @@
 export const links = {
-  baseUrl: 'https://hudovich.com',
   email: 'andrei@hudovich.com',
   calcom: 'https://cal.com/hudovich',
   source: 'https://github.com/ahudovich/hudovich.com',
