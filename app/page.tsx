@@ -6,8 +6,8 @@ import { HomeTechStack } from '@/components/pages/home/HomeTechStack'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Andrei Hudovich',
-  description: 'A freelance full stack engineer based in Wroclaw, Poland',
+  title: 'Andrei Hudovich - Freelance Full Stack Engineer',
+  description: `A freelance full stack engineer based in Wroclaw, Poland. If you need a reliable developer to build your product, I'm here to help.`,
   alternates: {
     canonical: '/',
   },
