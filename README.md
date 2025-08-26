@@ -37,8 +37,7 @@
 * [Tailwindcss](https://tailwindcss.com)
 * [Radix](https://www.radix-ui.com)
 
-<br />
-
 ## License
 
 This project is [MIT licensed](https://github.com/ahudovich/hudovich.com/blob/main/LICENSE).
+
