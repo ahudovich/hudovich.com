@@ -13,7 +13,7 @@ export function Footer({ className }: { className?: string }) {
     >
       <p className="group flex items-center gap-1.5 text-sm text-tertiary sm:text-xs">
         <span>&copy; {new Date().getFullYear()} Built with</span>
-        <IconHugeFavourite className="shrink-0 size-3 stroke-red-600 fill-red-600 transition-transform duration-300 group-hover:scale-120" />
+        <IconHugeFavourite className="shrink-0 size-3 stroke-red-600 fill-red-600 will-change-transform transition-transform duration-300 group-hover:scale-120" />
         <span>by Andrei</span>
       </p>
 

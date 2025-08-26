@@ -35,7 +35,7 @@ export function ProjectCard({ name, description, status, icon, link }: ProjectCa
       <p className="text-sm text-tertiary">{description}</p>
 
       {link && (
-        <IconHugeLinkSquare02 className="absolute top-3 right-3 size-3.5 fill-zinc-400 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-within:opacity-100" />
+        <IconHugeLinkSquare02 className="absolute top-3 right-3 size-3.5 fill-zinc-400 opacity-0 transition-opacity transform-gpu duration-300 group-hover:opacity-100 group-focus-within:opacity-100" />
       )}
     </Component>
   )
