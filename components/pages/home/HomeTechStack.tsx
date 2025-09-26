@@ -8,11 +8,11 @@ import { LogoNode } from '@/components/logos/tech/LogoNode'
 import { LogoPostgres } from '@/components/logos/tech/LogoPostgres'
 import { LogoRadix } from '@/components/logos/tech/LogoRadix'
 import { LogoReact } from '@/components/logos/tech/LogoReact'
-import { LogoReactQuery } from '@/components/logos/tech/LogoReactQuery'
-import { LogoReactRouter } from '@/components/logos/tech/LogoReactRouter'
 import { LogoShadcnUi } from '@/components/logos/tech/LogoShadcnUi'
 import { LogoSupabase } from '@/components/logos/tech/LogoSupabase'
 import { LogoTailwind } from '@/components/logos/tech/LogoTailwind'
+import { LogoTanstack } from '@/components/logos/tech/LogoTanstack'
+import { LogoTanstackQuery } from '@/components/logos/tech/LogoTanstackQuery'
 import { LogoTurborepo } from '@/components/logos/tech/LogoTurborepo'
 import { LogoTypescript } from '@/components/logos/tech/LogoTypescript'
 import { SectionHeader } from '@/components/SectionHeader'
@@ -27,12 +27,12 @@ const techStack = [
     icon: LogoReact,
   },
   {
-    label: 'React Router',
-    icon: LogoReactRouter,
+    label: 'TanStack Start',
+    icon: LogoTanstack,
   },
   {
-    label: 'React Query',
-    icon: LogoReactQuery,
+    label: 'TanStack Query',
+    icon: LogoTanstackQuery,
   },
   {
     label: 'TypeScript',
