@@ -6,7 +6,7 @@ import { LogoNest } from '@/components/logos/tech/LogoNest'
 import { LogoNextjs } from '@/components/logos/tech/LogoNextjs'
 import { LogoNode } from '@/components/logos/tech/LogoNode'
 import { LogoPostgres } from '@/components/logos/tech/LogoPostgres'
-import { LogoRadix } from '@/components/logos/tech/LogoRadix'
+import { LogoPrisma } from '@/components/logos/tech/LogoPrisma'
 import { LogoReact } from '@/components/logos/tech/LogoReact'
 import { LogoShadcnUi } from '@/components/logos/tech/LogoShadcnUi'
 import { LogoSupabase } from '@/components/logos/tech/LogoSupabase'
@@ -19,12 +19,12 @@ import { SectionHeader } from '@/components/SectionHeader'
 
 const techStack = [
   {
-    label: 'Next.js',
-    icon: LogoNextjs,
-  },
-  {
     label: 'React',
     icon: LogoReact,
+  },
+  {
+    label: 'Next.js',
+    icon: LogoNextjs,
   },
   {
     label: 'TanStack Start',
@@ -39,6 +39,10 @@ const techStack = [
     icon: LogoTypescript,
   },
   {
+    label: 'Better Auth',
+    icon: LogoBetterAuth,
+  },
+  {
     label: 'Node',
     icon: LogoNode,
   },
@@ -51,16 +55,16 @@ const techStack = [
     icon: LogoNest,
   },
   {
-    label: 'BetterAuth',
-    icon: LogoBetterAuth,
+    label: 'Postgres',
+    icon: LogoPostgres,
+  },
+  {
+    label: 'Prisma',
+    icon: LogoPrisma,
   },
   {
     label: 'Supabase',
     icon: LogoSupabase,
-  },
-  {
-    label: 'Postgres',
-    icon: LogoPostgres,
   },
   {
     label: 'Docker',
@@ -73,10 +77,6 @@ const techStack = [
   {
     label: 'shadcn/ui',
     icon: LogoShadcnUi,
-  },
-  {
-    label: 'Radix',
-    icon: LogoRadix,
   },
   {
     label: 'Tailwind',
@@ -102,7 +102,7 @@ export function HomeTechStack() {
             className="inline-flex items-center gap-2 px-2.5 h-6 bg-zinc-100 rounded-full outline-none font-[450] text-xs text-secondary"
             key={item.label}
           >
-            <item.icon className="shrink-0 size-4" />
+            <item.icon className="shrink-0 size-3.5" />
             {item.label}
           </li>
         ))}
