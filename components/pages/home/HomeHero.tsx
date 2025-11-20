@@ -23,7 +23,7 @@ export function HomeHero() {
       <div className="mb-5 text-md leading-[1.75] space-y-1.75">
         <p>
           <span className="sm:inline-block sm:mb-1.75">
-            A freelance full-stack engineer based in Wroclaw,{' '}
+            A full-stack software engineer based in Wroclaw,{' '}
             <span className="sm:hidden">Poland. </span>
             <span className="hidden sm:inline-flex sm:items-center sm:gap-1.5">
               Poland
@@ -39,14 +39,14 @@ export function HomeHero() {
           ecosystem.
         </p>
 
-        <p>If you need a reliable developer to build your product, I&apos;m here to help.</p>
+        <p>If you need a reliable developer to join your team, I&apos;m ready to dive in.</p>
       </div>
 
       <HomeHeroActions />
 
       <p className="relative mt-4 pl-5 text-xs text-tertiary">
         <span className="absolute left-0 top-1/2 size-3.5 -translate-y-1/2 rounded-full bg-green-500 border-4 border-green-100" />
-        Available for new projects, let&apos;s talk!
+        Available for hire, let&apos;s talk!
       </p>
     </section>
   )

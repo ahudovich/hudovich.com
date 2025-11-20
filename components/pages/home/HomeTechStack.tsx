@@ -91,10 +91,7 @@ const techStack = [
 export function HomeTechStack() {
   return (
     <section>
-      <SectionHeader
-        heading="Tech stack"
-        text="The tech stack I use for my personal and client work:"
-      />
+      <SectionHeader heading="Tech stack" text="The tech stack I use in my work:" />
 
       <ul className="flex flex-wrap items-center gap-2.5">
         {techStack.map((item) => (
