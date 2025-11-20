@@ -8,7 +8,7 @@ export function HomeHero() {
     <section>
       <Image
         className="mb-4 size-11 rounded-full"
-        src="/avatar.png"
+        src="/avatar.png?v=2"
         alt="Andrei Hudovich"
         width={44}
         height={44}

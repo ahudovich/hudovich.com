@@ -8,6 +8,13 @@ await jiti.import('./env')
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactCompiler: true,
+  images: {
+    localPatterns: [
+      {
+        pathname: '/**',
+      },
+    ],
+  },
   experimental: {
     turbopackFileSystemCacheForDev: true,
   },
