@@ -20,22 +20,15 @@ export function HomeHero() {
         <span className="border-b-[0.09375rem] border-current text-accent">Andrei Hudovich</span>!
       </h1>
 
-      <div className="mb-5 text-md leading-[1.75] space-y-1.75">
+      <div className="mb-5 text-md leading-[1.75] space-y-3 sm:space-y-0">
         <p>
           <span className="sm:inline-block sm:mb-1.75">
             A senior software engineer based in Wroclaw, <span className="sm:hidden">Poland. </span>
             <span className="hidden sm:inline-flex sm:items-center sm:gap-1.5">
               Poland
-              <IconFlagPoland className="shrink-0 w-3 h-[0.5625rem] rounded-xs drop-shadow-[0_0_1px_rgba(0,0,0,0.1)]" />
+              <IconFlagPoland className="shrink-0 w-3 h-2.25 rounded-xs drop-shadow-[0_0_1px_rgba(0,0,0,0.1)]" />
             </span>
           </span>
-          <br className="hidden sm:block" />
-          I&nbsp;specialize in building web applications with{' '}
-          <span className="inline-block bg-[#58C4DC]/10 rounded-md px-1.75">
-            <LogoReact className="inline-block mr-1.75 -mt-0.75 size-3.5" />
-            React
-          </span>{' '}
-          ecosystem.
         </p>
 
         <p>If you need a reliable developer to join your team, I&apos;m ready to dive in.</p>
