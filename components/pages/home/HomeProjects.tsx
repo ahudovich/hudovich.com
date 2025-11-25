@@ -1,4 +1,4 @@
-import { IconHugeMicOff02 } from '@/components/icons/huge/IconHugeMicOff02'
+import { IconAnalytics01 } from '@/components/icons/huge/IconAnalytics01'
 import { LogoProjectBlueskyMeter } from '@/components/logos/projects/LogoProjectBlueskyMeter'
 import { LogoProjectListingCat } from '@/components/logos/projects/LogoProjectListingCat'
 import { ProjectCard } from '@/components/ProjectCard'
@@ -16,10 +16,11 @@ interface Project {
 
 const projects: Array<Project> = [
   {
-    name: 'Project Y',
-    description: 'My new project that I work on in stealth mode for now.',
-    status: 'active',
-    icon: <IconHugeMicOff02 className="fill-zinc-600" />,
+    name: 'Analytics',
+    description: 'Open-source product and web analytics.',
+    status: 'in development',
+    icon: <IconAnalytics01 className="fill-inherit" />,
+    link: 'https://github.com/ahudovich/analytics',
   },
   {
     name: 'Listing Cat',
