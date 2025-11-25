@@ -23,8 +23,7 @@ export function HomeHero() {
       <div className="mb-5 text-md leading-[1.75] space-y-1.75">
         <p>
           <span className="sm:inline-block sm:mb-1.75">
-            A full-stack software engineer based in Wroclaw,{' '}
-            <span className="sm:hidden">Poland. </span>
+            A senior software engineer based in Wroclaw, <span className="sm:hidden">Poland. </span>
             <span className="hidden sm:inline-flex sm:items-center sm:gap-1.5">
               Poland
               <IconFlagPoland className="shrink-0 w-3 h-[0.5625rem] rounded-xs drop-shadow-[0_0_1px_rgba(0,0,0,0.1)]" />

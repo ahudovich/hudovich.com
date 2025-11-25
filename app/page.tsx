@@ -6,9 +6,9 @@ import { HomeTechStack } from '@/components/pages/home/HomeTechStack'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Andrei Hudovich - Full-Stack Software Engineer',
+  title: 'Andrei Hudovich - Senior Software Engineer',
   description:
-    "A full-stack software engineer based in Wroclaw, Poland. If you need a reliable developer to join your team, I'm ready to dive in.",
+    "A senior software engineer based in Wroclaw, Poland. If you need a reliable developer to join your team, I'm ready to dive in.",
   alternates: {
     canonical: '/',
   },
