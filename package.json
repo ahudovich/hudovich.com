@@ -19,6 +19,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "typecheck": "astro check"
   },
   "dependencies": {
@@ -31,11 +33,14 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.6",
     "@eslint/js": "^10.0.1",
+    "@ianvs/prettier-plugin-sort-imports": "4.7.1",
     "@typescript-eslint/parser": "^8.56.0",
     "eslint": "^10.0.0",
     "eslint-plugin-astro": "^1.6.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-unicorn": "^63.0.0",
+    "prettier": "3.8.1",
+    "prettier-plugin-astro": "0.14.1",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.56.0"
   }
