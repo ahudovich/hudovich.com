@@ -1,6 +1,7 @@
 .astro
 .codex
 .github
+.husky
 .vercel
 .vscode
 dist

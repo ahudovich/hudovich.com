@@ -12,7 +12,7 @@ const config = defineConfig([
   ...eslintPluginAstro.configs.recommended,
   jsxA11y.flatConfigs.recommended,
 
-  globalIgnores(['.astro', '.codex', '.github', '.vercel', '.vscode', 'dist']),
+  globalIgnores(['.astro', '.codex', '.github', '.husky', '.vercel', '.vscode', 'dist']),
 
   {
     rules: {
