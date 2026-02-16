@@ -40,7 +40,6 @@
     "eslint": "^10.0.0",
     "eslint-plugin-astro": "^1.6.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-unicorn": "^63.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
     "prettier": "3.8.1",
