@@ -17,7 +17,8 @@
     "astro": "astro",
     "dev": "vercel env run -- astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "typecheck": "astro check"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",
@@ -25,5 +26,9 @@
     "@astrojs/sitemap": "^3.7.0",
     "astro": "^5.17.1",
     "sharp": "^0.34.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.6",
+    "typescript": "^5.9.3"
   }
 }
