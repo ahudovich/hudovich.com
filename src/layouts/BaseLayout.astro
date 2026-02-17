@@ -25,10 +25,6 @@ const canonicalURL = pathname === '/'
   ? new URL(siteURL).origin
   : new URL(pathname, siteURL)
 
-const faviconURL = new URL('/favicon.ico', siteURL)
-const iconURL = new URL('/icon.svg', siteURL)
-const appleTouchIconURL = new URL('/apple-touch-icon.png', siteURL)
-
 const openGraphImageURL = new URL('/opengraph-image.png', siteURL)
 const openGraphImageWidth = '1200'
 const openGraphImageHeight = '630'
@@ -46,11 +42,12 @@ const openGraphImageType = 'image/png'
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
 
     <!-- Favicons -->
-    <link rel="icon" href={faviconURL} sizes="32x32" />
-    <link rel="icon" href={iconURL} type="image/svg+xml" />
-    <link rel="apple-touch-icon" href={appleTouchIconURL} />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     <!-- Fonts -->
     <Font cssVariable="--font-geist" preload />
