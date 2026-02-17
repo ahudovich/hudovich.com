@@ -11,6 +11,8 @@ export default defineConfig({
       ? `https://${process.env.VERCEL_URL}`
       : process.env.PUBLIC_BASE_URL,
 
+  trailingSlash: 'never',
+
   env: {
     validateSecrets: true,
     schema: {

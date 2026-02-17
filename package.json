@@ -17,6 +17,7 @@
     "astro": "astro",
     "dev": "vercel env run -- astro dev",
     "build": "astro build",
+    "build:local": "vercel env run -e development -- astro build",
     "preview": "astro preview",
     "lint": "eslint .",
     "format": "prettier --write .",
