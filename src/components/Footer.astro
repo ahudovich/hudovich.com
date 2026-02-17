@@ -1,4 +1,6 @@
 ---
+import IconGitFork from '@/assets/icons/tabler/icon-git-fork.svg'
+import IconHeartFilled from '@/assets/icons/tabler/icon-heart-filled.svg'
 import { links } from '@/data/links'
 import { cn } from '@/lib/utils/css'
 import type { HTMLAttributes } from 'astro/types'
@@ -19,19 +21,14 @@ const year = new Date().getFullYear()
 >
   <p class="group flex items-center gap-1.5 text-sm text-tertiary sm:text-xs">
     <span>&copy; {year} Built with</span>
-    <svg
-      class="size-3 shrink-0 fill-red-600 text-red-600 transition-transform duration-300 group-hover:scale-120"
-      viewBox="0 0 24 24"
+    <IconHeartFilled
+      class="shrink-0 size-3.5 text-red-600 transition-transform duration-300 group-hover:scale-120"
       aria-hidden="true"
-    >
-      <path
-        d="M12 21s-7.2-4.6-9.5-8.3A5.8 5.8 0 0 1 12 5a5.8 5.8 0 0 1 9.5 7.7C19.2 16.4 12 21 12 21Z"
-      ></path>
-    </svg>
+    />
     <span>by Andrei</span>
   </p>
 
-  <p class="text-sm text-tertiary sm:text-xs">
+  <p class="inline-flex items-center gap-1 text-sm text-tertiary sm:text-xs">
     This website is
     <a
       class="group ml-1 inline-flex items-center gap-1 font-medium text-primary"
@@ -44,21 +41,7 @@ const year = new Date().getFullYear()
       >
         open source
       </span>
-      <svg
-        class="size-3.5 shrink-0 fill-none stroke-current"
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-      >
-        <path d="M16 6h4v4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
-        ></path>
-        <path d="M10 14 20 4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
-        ></path>
-        <path
-          d="M20 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h4"
-          stroke-width="1.8"
-          stroke-linecap="round"
-          stroke-linejoin="round"></path>
-      </svg>
+      <IconGitFork class="size-3.5 shrink-0 fill-none stroke-current" aria-hidden="true" />
     </a>
   </p>
 </footer>
