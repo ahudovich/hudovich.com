@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://hudovich.com/sitemap-index.xml
