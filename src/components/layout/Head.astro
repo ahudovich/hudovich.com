@@ -1,0 +1,34 @@
+---
+interface Props {
+  title: string
+  description: string
+}
+
+const { title, description }: Props = Astro.props
+
+const openGraphImageURL = new URL('/opengraph-image.png', Astro.url)
+const openGraphImageWidth = '1200'
+const openGraphImageHeight = '630'
+const openGraphImageType = 'image/png'
+---
+
+<!-- SEO -->
+<title>{title}</title>
+<meta name="description" content={description} />
+
+<!-- Open Graph -->
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={openGraphImageURL} />
+<meta property="og:image:width" content={openGraphImageWidth} />
+<meta property="og:image:height" content={openGraphImageHeight} />
+<meta property="og:image:type" content={openGraphImageType} />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={openGraphImageURL} />
+<meta name="twitter:image:width" content={openGraphImageWidth} />
+<meta name="twitter:image:height" content={openGraphImageHeight} />
+<meta name="twitter:image:type" content={openGraphImageType} />
