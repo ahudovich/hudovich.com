@@ -29,7 +29,9 @@
     "@astrojs/rss": "^4.0.15",
     "@astrojs/sitemap": "^3.7.0",
     "astro": "^5.17.1",
-    "sharp": "^0.34.3"
+    "clsx": "^2.1.1",
+    "sharp": "^0.34.3",
+    "tailwind-merge": "^3.4.1"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.6",

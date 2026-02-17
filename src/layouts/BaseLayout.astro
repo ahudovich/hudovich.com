@@ -1,0 +1,24 @@
+---
+import '@/styles/global.css'
+import { Font } from 'astro:assets'
+import Footer from '@/components/Footer.astro'
+import Header from '@/components/Header.astro'
+---
+
+<!doctype html>
+<html class="h-full" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <Font cssVariable="--font-geist" preload />
+    <Font cssVariable="--font-geist-mono" preload />
+  </head>
+
+  <body class="px-4 h-full font-mono text-md text-primary antialiased sm:px-8">
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
