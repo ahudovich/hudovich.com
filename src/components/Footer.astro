@@ -9,7 +9,7 @@ type Props = HTMLAttributes<'footer'>
 
 const { class: className, ...props }: Props = Astro.props
 
-const year = new Date().getFullYear()
+const buildYear = new Date().getFullYear()
 ---
 
 <footer
@@ -20,7 +20,9 @@ const year = new Date().getFullYear()
   {...props}
 >
   <p class="group flex items-center gap-1.5 text-sm text-tertiary sm:text-xs">
-    <span>&copy; {year} Built with</span>
+    <span>
+      &copy; <span data-current-year>{buildYear}</span> Built with
+    </span>
     <IconHeartFilled
       class="shrink-0 size-3.5 text-red-600 transition-transform duration-300 group-hover:scale-120"
       aria-hidden="true"
@@ -45,3 +47,12 @@ const year = new Date().getFullYear()
     </a>
   </p>
 </footer>
+
+<script>
+  const currentYear = String(new Date().getFullYear())
+  const yearElement = document.querySelector('[data-current-year]')
+
+  if (yearElement) {
+    yearElement.textContent = currentYear
+  }
+</script>
