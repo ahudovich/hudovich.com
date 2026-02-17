@@ -6,6 +6,5 @@
 .vscode
 dist
 *.yaml
-*.json
 *.md
 *.mdx
