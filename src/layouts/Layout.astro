@@ -4,6 +4,7 @@ import { Font } from 'astro:assets'
 import SpeedInsights from '@vercel/speed-insights/astro'
 import Footer from '@/components/layout/Footer.astro'
 import Header from '@/components/layout/Header.astro'
+import PostHog from '@/components/PostHog.astro'
 
 interface Props {
   title: string
@@ -69,6 +70,8 @@ const openGraphImageType = 'image/png'
     <meta name="twitter:image:width" content={openGraphImageWidth} />
     <meta name="twitter:image:height" content={openGraphImageHeight} />
     <meta name="twitter:image:type" content={openGraphImageType} />
+
+    <PostHog />
   </head>
 
   <body class="h-dvh px-4 font-mono text-md text-primary antialiased sm:px-8">

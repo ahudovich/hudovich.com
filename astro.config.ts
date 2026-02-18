@@ -1,4 +1,4 @@
-import { defineConfig, envField, fontProviders } from 'astro/config'
+import { defineConfig, fontProviders } from 'astro/config'
 import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
 import tailwindcss from '@tailwindcss/vite'
@@ -16,21 +16,6 @@ export default defineConfig({
       : process.env.PUBLIC_BASE_URL,
 
   trailingSlash: 'never',
-
-  env: {
-    validateSecrets: true,
-    schema: {
-      PUBLIC_POSTHOG_HOST: envField.string({
-        context: 'client',
-        access: 'public',
-        url: true,
-      }),
-      PUBLIC_POSTHOG_KEY: envField.string({
-        context: 'client',
-        access: 'public',
-      }),
-    },
-  },
 
   experimental: {
     fonts: [

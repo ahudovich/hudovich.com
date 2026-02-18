@@ -1,9 +1,9 @@
 {
   "name": "hudovich.com",
   "version": "2.0.0",
-  "packageManager": "pnpm@10.29.3+sha512.498e1fb4cca5aa06c1dcf2611e6fafc50972ffe7189998c409e90de74566444298ffe43e6cd2acdc775ba1aa7cc5e092a8b7054c811ba8c5770f84693d33d2dc",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@10.29.3+sha512.498e1fb4cca5aa06c1dcf2611e6fafc50972ffe7189998c409e90de74566444298ffe43e6cd2acdc775ba1aa7cc5e092a8b7054c811ba8c5770f84693d33d2dc",
   "author": {
     "name": "Andrei Hudovich",
     "email": "andrei@hudovich.com"
@@ -14,6 +14,7 @@
     "url": "https://github.com/ahudovich/hudovich.com"
   },
   "scripts": {
+    "prepare": "husky",
     "astro": "astro",
     "dev": "vercel env run -- astro dev",
     "build": "astro build",
@@ -22,8 +23,7 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "typecheck": "astro check",
-    "prepare": "husky"
+    "typecheck": "astro check"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",
