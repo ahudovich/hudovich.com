@@ -6,6 +6,10 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   integrations: [mdx(), sitemap()],
 
+  vite: {
+    plugins: [tailwindcss()],
+  },
+
   site:
     process.env.VERCEL_ENV === 'preview'
       ? `https://${process.env.VERCEL_URL}`
@@ -49,9 +53,9 @@ export default defineConfig({
         fallbacks: ['monospace'],
       },
     ],
-  },
 
-  vite: {
-    plugins: [tailwindcss()],
+    svgo: {
+      multipass: true,
+    },
   },
 })
