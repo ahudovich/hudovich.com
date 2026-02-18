@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import IconFlagPoland from '@/assets/icons/icon-flag-pl.svg'
+import avatar from '@/assets/images/avatar.png'
 import Button from '@/components/ui/Button.astro'
 import Hotkey from '@/components/ui/Hotkey.astro'
 import links from '@/data/links.json'
@@ -9,7 +10,7 @@ import links from '@/data/links.json'
 <section>
   <Image
     class="mb-4 size-11 rounded-full"
-    src="/images/avatar.png"
+    src={avatar}
     alt="Andrei Hudovich"
     width={44}
     height={44}
