@@ -1,6 +1,7 @@
 ---
 import '@/styles/global.css'
 import { Font } from 'astro:assets'
+import SpeedInsights from '@vercel/speed-insights/astro'
 import Footer from '@/components/layout/Footer.astro'
 import Header from '@/components/layout/Header.astro'
 
@@ -76,5 +77,8 @@ const openGraphImageType = 'image/png'
       <slot />
     </main>
     <Footer />
+
+    <!-- Vercel Speed Insights -->
+    <SpeedInsights />
   </body>
 </html>
