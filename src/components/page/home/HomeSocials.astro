@@ -1,0 +1,63 @@
+---
+import IconHugeBluesky from '@/assets/icons/huge/icon-bluesky.svg'
+import IconHugeBookmark01 from '@/assets/icons/huge/icon-bookmark-01.svg'
+import IconHugeLinkedIn01 from '@/assets/icons/huge/icon-linkedin-01.svg'
+import IconHugeNewTwitter from '@/assets/icons/huge/icon-new-twitter.svg'
+import IconHugeThreads from '@/assets/icons/huge/icon-threads.svg'
+import SectionHeader from '@/components/SectionHeader.astro'
+import links from '@/data/links.json'
+
+const socialLinks = [
+  {
+    label: 'X/Twitter',
+    icon: IconHugeNewTwitter,
+    href: links.social.x,
+    fill: 'fill-primary',
+  },
+  {
+    label: 'Threads',
+    icon: IconHugeThreads,
+    href: links.social.threads,
+    fill: 'fill-primary',
+  },
+  {
+    label: 'Bluesky',
+    icon: IconHugeBluesky,
+    href: links.social.bluesky,
+    fill: 'fill-[#0085dd]',
+  },
+  {
+    label: 'LinkedIn',
+    icon: IconHugeLinkedIn01,
+    href: links.social.linkedin,
+    fill: 'fill-[#0a66c2]',
+  },
+  {
+    label: 'Substack',
+    icon: IconHugeBookmark01,
+    href: links.social.substack,
+    fill: 'fill-[#fe6a09]',
+  },
+]
+---
+
+<section>
+  <SectionHeader heading="Find me on" text="You can find me on the following social platforms:" />
+
+  <ul class="flex flex-wrap items-center gap-2.5">
+    {
+      socialLinks.map((link) => (
+        <li class="group">
+          <a
+            class="inline-flex items-center gap-2 px-2.5 h-6 bg-zinc-100 rounded-full outline-none font-medium text-xs text-secondary transition-all hover:bg-zinc-200/75 focus:ring-3 focus:ring-zinc-200"
+            href={link.href}
+            target="_blank"
+          >
+            <link.icon class={`shrink-0 size-4 group-first:size-3.5 ${link.fill}`} />
+            {link.label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>
