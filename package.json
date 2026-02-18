@@ -31,6 +31,7 @@
     "@astrojs/sitemap": "^3.7.0",
     "astro": "^5.17.1",
     "clsx": "^2.1.1",
+    "cva": "1.0.0-beta.4",
     "sharp": "^0.34.3",
     "tailwind-merge": "^3.4.1"
   },

@@ -1,1 +1,1 @@
-export type ProjectStatusType = 'active' | 'sold' | 'in development'
+export type ProjectStatusType = 'active' | 'sold' | 'development'
