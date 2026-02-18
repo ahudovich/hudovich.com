@@ -1,6 +1,6 @@
 ---
-import IconGitFork from '@/assets/icons/tabler/icon-git-fork.svg'
-import IconHeartFilled from '@/assets/icons/tabler/icon-heart-filled.svg'
+import IconFavourite from '@/assets/icons/huge/icon-favourite.svg'
+import IconGitFork from '@/assets/icons/huge/icon-git-fork.svg'
 import links from '@/data/links.json'
 import { cn } from '@/lib/utils'
 import type { HTMLAttributes } from 'astro/types'
@@ -23,8 +23,8 @@ const buildYear = new Date().getFullYear()
     <span>
       &copy; <span data-current-year>{buildYear}</span> Built with
     </span>
-    <IconHeartFilled
-      class="shrink-0 size-3.5 text-red-600 transition-transform duration-300 group-hover:scale-120"
+    <IconFavourite
+      class="shrink-0 size-3.5 fill-red-600 transition-transform duration-300 group-hover:scale-120"
       aria-hidden="true"
     />
     <span>by Andrei</span>
@@ -43,7 +43,7 @@ const buildYear = new Date().getFullYear()
       >
         open source
       </span>
-      <IconGitFork class="size-3.5 shrink-0 fill-none stroke-current" aria-hidden="true" />
+      <IconGitFork class="shrink-0 size-3.5 fill-current" aria-hidden="true" />
     </a>
   </p>
 </footer>

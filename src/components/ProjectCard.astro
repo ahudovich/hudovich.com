@@ -1,5 +1,5 @@
 ---
-import IconExternalLink from '@/assets/icons/tabler/icon-external-link.svg'
+import IconLinkSquare02 from '@/assets/icons/huge/icon-link-square-02.svg'
 import ProjectStatus from '@/components/ProjectStatus.astro'
 import { cn } from '@/lib/utils'
 import type { HTMLAttributes } from 'astro/types'
@@ -43,7 +43,7 @@ const Component = link ? 'a' : 'div'
 
   {
     link && (
-      <IconExternalLink class="absolute top-3 right-3 size-3.5 text-zinc-400 opacity-0 transition-opacity transform-gpu duration-300 group-hover:opacity-100 group-focus-within:opacity-100" />
+      <IconLinkSquare02 class="absolute top-3 right-3 size-3.5 text-zinc-400 opacity-0 transition-opacity transform-gpu duration-300 group-hover:opacity-100 group-focus-within:opacity-100" />
     )
   }
 </Component>
