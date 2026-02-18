@@ -1,7 +1,7 @@
 ---
 import IconLinkSquare02 from '@/assets/icons/huge/icon-link-square-02.svg'
-import ProjectStatus from '@/components/ProjectStatus.astro'
 import { cn } from '@/lib/utils'
+import HomeProjectsStatus from './HomeProjectsStatus.astro'
 import type { HTMLAttributes } from 'astro/types'
 import type { ProjectStatusType } from '@/lib/types'
 
@@ -36,7 +36,7 @@ const Component = link ? 'a' : 'div'
     </div>
 
     <h3 class="font-medium text-md">{name}</h3>
-    <ProjectStatus status={status} />
+    <HomeProjectsStatus status={status} />
   </div>
 
   <p class="text-sm text-tertiary">{description}</p>

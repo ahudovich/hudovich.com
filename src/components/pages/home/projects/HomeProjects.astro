@@ -3,8 +3,8 @@ import IconAnalytics01 from '@/assets/icons/huge/icon-analytics-01.svg'
 import LogoProjectBlueskyMeter from '@/assets/logos/projects/logo-blueskymeter.svg'
 import LogoProjectListingCat from '@/assets/logos/projects/logo-listingcat.svg'
 import SectionHeader from '@/components/layout/SectionHeader.astro'
-import ProjectCard from '@/components/ProjectCard.astro'
 import links from '@/data/links.json'
+import HomeProjectsCard from './HomeProjectsCard.astro'
 import type { SvgComponent } from 'astro/types'
 import type { ProjectStatusType } from '@/lib/types'
 
@@ -48,14 +48,14 @@ const projects: Array<Project> = [
     {
       projects.map((project) => (
         <li>
-          <ProjectCard
+          <HomeProjectsCard
             name={project.name}
             description={project.description}
             status={project.status}
             link={project.link}
           >
             <project.icon />
-          </ProjectCard>
+          </HomeProjectsCard>
         </li>
       ))
     }
