@@ -7,7 +7,7 @@ import type { HTMLAttributes } from 'astro/types'
 
 type Props = HTMLAttributes<'footer'>
 
-const { class: className, ...props }: Props = Astro.props
+const { class: className, ...props } = Astro.props
 
 const buildYear = new Date().getFullYear()
 ---

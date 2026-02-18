@@ -5,7 +5,7 @@ import type { HTMLAttributes } from 'astro/types'
 
 type Props = HTMLAttributes<'header'>
 
-const { class: className, ...props }: Props = Astro.props
+const { class: className, ...props } = Astro.props
 ---
 
 <header class={cn('group flex items-center mx-auto h-16', className)} {...props}>

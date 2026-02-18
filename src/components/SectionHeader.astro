@@ -1,13 +1,16 @@
 ---
-interface Props {
+import { cn } from '@/lib/utils'
+import type { HTMLAttributes } from 'astro/types'
+
+interface Props extends HTMLAttributes<'div'> {
   heading: string
   text?: string
 }
 
-const { heading, text, ...props } = Astro.props
+const { class: className, heading, text, ...props } = Astro.props
 ---
 
-<div class="mb-4" {...props}>
+<div class={cn('mb-4', className)} {...props}>
   <h2 class="font-sans font-medium text-xs text-faded tracking-[0.02em] uppercase">{heading}</h2>
   {text && <p class="mt-3 text-md">{text}</p>}
 </div>
