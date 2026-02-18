@@ -1,0 +1,32 @@
+---
+import { cva } from 'cva'
+import { cn } from '@/lib/utils'
+import type { HTMLAttributes } from 'astro/types'
+import type { VariantProps } from 'cva'
+
+const buttonVariants = cva({
+  base: 'inline-flex justify-center items-center gap-2 px-4 h-8 rounded-full outline-none font-sans font-medium text-sm whitespace-nowrap transition-all cursor-pointer focus:ring-3 focus:ring-zinc-200 [&>svg]:shrink-0 [&>svg]:fill-current [&>svg]:size-4',
+  variants: {
+    variant: {
+      primary: 'bg-layout-primary-active text-contrast hover:bg-layout-primary-hover',
+      secondary:
+        'bg-layout-secondary-active border border-layout-primary text-primary hover:bg-layout-secondary-hover',
+    },
+  },
+  defaultVariants: {
+    variant: 'primary',
+  },
+})
+
+type ButtonVariantProps = VariantProps<typeof buttonVariants>
+
+interface Props extends HTMLAttributes<'a'> {
+  variant?: ButtonVariantProps['variant']
+}
+
+const { class: className, variant, ...props } = Astro.props
+---
+
+<a class={cn(buttonVariants({ variant }), className)} {...props}>
+  <slot />
+</a>

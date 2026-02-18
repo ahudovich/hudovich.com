@@ -1,4 +1,3 @@
-<!-- Summary -->
 <div align="center">
   <div>
     <img src="/.github/assets/logo.png" alt="logo" width="200" height="200">
@@ -29,13 +28,10 @@
 
 <br />
 
-
 ## Built With
 
-* [Next.js](https://nextjs.org)
-* [React](https://react.dev)
+* [Astro](https://astro.build)
 * [Tailwindcss](https://tailwindcss.com)
-* [Radix](https://www.radix-ui.com)
 
 ## License
 

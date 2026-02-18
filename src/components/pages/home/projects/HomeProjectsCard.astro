@@ -1,0 +1,49 @@
+---
+import IconLinkSquare02 from '@/assets/icons/huge/icon-link-square-02.svg'
+import { cn } from '@/lib/utils'
+import HomeProjectsStatus from './HomeProjectsStatus.astro'
+import type { HTMLAttributes } from 'astro/types'
+import type { ProjectStatusType } from '@/lib/types'
+
+interface Props extends HTMLAttributes<'div'> {
+  name: string
+  description: string
+  status: ProjectStatusType
+  link?: string
+}
+
+const { class: className, name, description, status, link, ...props } = Astro.props
+
+const Component = link ? 'a' : 'div'
+---
+
+<Component
+  class={cn(
+    'block p-3 bg-layout-secondary-active border border-layout-primary rounded-lg',
+    link &&
+      'group relative ring-3 ring-transparent outline-none cursor-pointer transition-all duration-300 hover:border-zinc-300 hover:ring-zinc-100 focus-visible:border-zinc-300 focus-visible:ring-zinc-100',
+    className
+  )}
+  href={link}
+  target={link ? '_blank' : undefined}
+  {...props}
+>
+  <div class="flex items-center gap-2 mb-2">
+    <div
+      class="shrink-0 grid place-content-center size-6 bg-layout-secondary-contrast border border-layout-primary rounded-sm [&>svg]:size-4"
+    >
+      <slot />
+    </div>
+
+    <h3 class="font-medium text-md">{name}</h3>
+    <HomeProjectsStatus status={status} />
+  </div>
+
+  <p class="text-sm text-tertiary">{description}</p>
+
+  {
+    link && (
+      <IconLinkSquare02 class="absolute top-3 right-3 size-3.5 fill-zinc-400 opacity-0 transition-opacity transform-gpu duration-300 group-hover:opacity-100 group-focus-within:opacity-100" />
+    )
+  }
+</Component>

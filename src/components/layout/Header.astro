@@ -1,0 +1,20 @@
+---
+import Logo from '@/assets/logo.svg'
+import { cn } from '@/lib/utils'
+import type { HTMLAttributes } from 'astro/types'
+
+type Props = HTMLAttributes<'header'>
+
+const { class: className, ...props } = Astro.props
+---
+
+<header class={cn('group flex items-center mx-auto h-16', className)} {...props}>
+  <div class="flex items-center gap-1 select-none">
+    <span class="relative z-1 shrink-0 bg-white">
+      <Logo class="size-5 text-accent" />
+    </span>
+    <span class="font-bold text-[1.0625rem] leading-5 tracking-[0.025em] text-secondary uppercase">
+      AH
+    </span>
+  </div>
+</header>

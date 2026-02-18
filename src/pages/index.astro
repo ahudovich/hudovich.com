@@ -1,0 +1,19 @@
+---
+import HomeContact from '@/components/pages/home/HomeContact.astro'
+import HomeHero from '@/components/pages/home/HomeHero.astro'
+import HomeSocials from '@/components/pages/home/HomeSocials.astro'
+import HomeProjects from '@/components/pages/home/projects/HomeProjects.astro'
+import Layout from '@/layouts/Layout.astro'
+---
+
+<Layout
+  title="Andrei Hudovich"
+  description="A senior software engineer and solopreneur based in Wroclaw, Poland."
+>
+  <div class="mx-auto pt-6 pb-12 max-w-160 space-y-12 sm:py-10">
+    <HomeHero />
+    <HomeProjects />
+    <HomeSocials />
+    <HomeContact />
+  </div>
+</Layout>
