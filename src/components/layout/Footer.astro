@@ -24,7 +24,7 @@ const buildYear = new Date().getFullYear()
       &copy; <span data-current-year>{buildYear}</span> Built with
     </span>
     <IconFavourite
-      class="shrink-0 size-3.5 fill-red-600 transition-transform duration-300 group-hover:scale-120"
+      class="shrink-0 size-3 stroke-red-600 fill-red-600 transition-transform duration-300 will-change-transform group-hover:scale-120"
       aria-hidden="true"
     />
     <span>by Andrei</span>
@@ -33,7 +33,7 @@ const buildYear = new Date().getFullYear()
   <p class="inline-flex items-center gap-1 text-sm text-tertiary sm:text-xs">
     This website is
     <a
-      class="group ml-1 inline-flex items-center gap-1 font-medium text-primary"
+      class="group ml-0.75 inline-flex items-center gap-1 font-medium text-primary"
       href={links.source}
       target="_blank"
       rel="noopener noreferrer"
