@@ -4,13 +4,18 @@ import jsxA11y from 'eslint-plugin-jsx-a11y'
 import { defineConfig, globalIgnores } from 'eslint/config'
 import tseslint from 'typescript-eslint'
 
-const config = defineConfig([
-  eslint.configs.recommended,
-  ...tseslint.configs.recommended,
-  ...eslintPluginAstro.configs.recommended,
-  jsxA11y.flatConfigs.recommended,
-
+export default defineConfig([
   globalIgnores(['.astro', '.codex', '.github', '.husky', '.vercel', '.vscode', 'dist']),
+  {
+    files: ['**/*.{ts,tsx,astro}'],
+    extends: [
+      eslint.configs.recommended,
+      tseslint.configs.recommended,
+      jsxA11y.flatConfigs.recommended,
+    ],
+  },
+  {
+    files: ['**/*.astro'],
+    extends: [eslintPluginAstro.configs.recommended],
+  },
 ])
-
-export default config
