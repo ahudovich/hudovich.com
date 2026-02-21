@@ -4,9 +4,9 @@ import type { VariantProps } from 'cva'
 
 const buttonVariants = cva({
   base: [
-    'inline-flex justify-center items-center gap-2 px-4 h-8 border border-transparent rounded-full outline-none font-sans font-medium text-sm whitespace-nowrap transition-all cursor-pointer select-none',
+    'inline-flex h-8 cursor-pointer items-center justify-center gap-2 rounded-full border border-transparent px-4 font-sans text-sm font-medium whitespace-nowrap transition-all outline-none select-none',
     'focus-visible:ring-3 focus-visible:ring-zinc-200 disabled:pointer-events-none disabled:opacity-50',
-    '[&_svg]:shrink-0 [&_svg]:fill-current [&_svg:not([class*="size-"])]:size-4 [&_svg]:pointer-events-none',
+    '[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg]:fill-current [&_svg:not([class*="size-"])]:size-4',
   ],
   variants: {
     variant: {

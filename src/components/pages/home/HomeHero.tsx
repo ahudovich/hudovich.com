@@ -8,18 +8,18 @@ export function HomeHero({ children }: { children: React.ReactNode }) {
     <section>
       <div className="mb-4">{children}</div>
 
-      <h1 className="mb-4 font-sans font-semibold text-[1.375rem] leading-7 tracking-[0.02em]">
+      <h1 className="mb-4 font-sans text-[1.375rem] leading-7 font-semibold tracking-[0.02em]">
         Hey, I&apos;m{' '}
-        <span className="border-b-[0.09375rem] border-current text-primary">Andrei Hudovich</span>!
+        <span className="text-primary border-b-[0.09375rem] border-current">Andrei Hudovich</span>!
       </h1>
 
-      <div className="mb-5 text-base leading-[1.75] space-y-3 sm:space-y-0">
+      <div className="mb-5 space-y-3 text-base leading-[1.75] sm:space-y-0">
         <p>
-          <span className="sm:inline-block sm:mb-1.75">
+          <span className="sm:mb-1.75 sm:inline-block">
             A senior software engineer based in Wroclaw, <span className="sm:hidden">Poland.</span>
             <span className="hidden sm:inline-flex sm:items-center sm:gap-1.5">
               Poland
-              <IconFlagPoland className="shrink-0 w-3 h-2.25 rounded-xs drop-shadow-[0_0_1px_rgba(0,0,0,0.1)]" />
+              <IconFlagPoland className="h-2.25 w-3 shrink-0 rounded-xs drop-shadow-[0_0_1px_rgba(0,0,0,0.1)]" />
             </span>
           </span>
         </p>
@@ -39,8 +39,8 @@ export function HomeHero({ children }: { children: React.ReactNode }) {
         </Button>
       </div>
 
-      <p className="relative mt-4 pl-5 text-xs text-tertiary">
-        <span className="absolute left-0 top-1/2 size-3.5 -translate-y-1/2 rounded-full bg-green-500 border-4 border-green-100"></span>
+      <p className="text-tertiary relative mt-4 pl-5 text-xs">
+        <span className="absolute top-1/2 left-0 size-3.5 -translate-y-1/2 rounded-full border-4 border-green-100 bg-green-500"></span>
         Available for hire, let&apos;s talk!
       </p>
     </section>

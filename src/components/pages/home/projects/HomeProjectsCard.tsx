@@ -23,30 +23,30 @@ export function HomeProjectsCard({
   return (
     <a
       className={cn(
-        'block p-3 bg-layout-secondary-active border border-border rounded-lg',
+        'bg-layout-secondary-active border-border block rounded-lg border p-3',
         href &&
-          'group relative ring-3 ring-transparent outline-none cursor-pointer transition-all duration-300 hover:border-zinc-300 hover:ring-zinc-100 focus-visible:border-zinc-300 focus-visible:ring-zinc-100',
+          'group relative cursor-pointer ring-3 ring-transparent transition-all duration-300 outline-none hover:border-zinc-300 hover:ring-zinc-100 focus-visible:border-zinc-300 focus-visible:ring-zinc-100',
         className
       )}
       href={href}
       target={href ? '_blank' : undefined}
       {...props}
     >
-      <div className="flex items-center gap-2 mb-2">
-        <div className="shrink-0 grid place-content-center size-6 bg-layout-secondary-contrast border border-border rounded-sm *:size-4 *:text-foreground">
+      <div className="mb-2 flex items-center gap-2">
+        <div className="bg-layout-secondary-contrast border-border *:text-foreground grid size-6 shrink-0 place-content-center rounded-sm border *:size-4">
           {icon}
         </div>
 
-        <h3 className="font-medium text-base">{name}</h3>
+        <h3 className="text-base font-medium">{name}</h3>
         <HomeProjectsStatus status={status} />
       </div>
 
-      <p className="text-sm text-tertiary">{description}</p>
+      <p className="text-tertiary text-sm">{description}</p>
 
       {href && (
         <Icon
           icon={LinkSquare02Icon}
-          className="absolute top-3 right-3 size-3.5 text-zinc-400 opacity-0 transition-opacity transform-gpu duration-300 group-hover:opacity-100 group-focus-within:opacity-100"
+          className="absolute top-3 right-3 size-3.5 transform-gpu text-zinc-400 opacity-0 transition-opacity duration-300 group-focus-within:opacity-100 group-hover:opacity-100"
         />
       )}
     </a>

@@ -4,7 +4,7 @@ import type { VariantProps } from 'cva'
 import type { ProjectStatusType } from '@/lib/types'
 
 const projectStatusVariants = cva({
-  base: 'inline-flex items-center px-2.5 h-5 rounded-full font-medium text-xs whitespace-nowrap capitalize',
+  base: 'inline-flex h-5 items-center rounded-full px-2.5 text-xs font-medium whitespace-nowrap capitalize',
   variants: {
     status: {
       active: 'bg-green-100 text-green-800',

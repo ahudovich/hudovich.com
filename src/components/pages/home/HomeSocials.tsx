@@ -71,13 +71,13 @@ export function HomeSocials() {
         {socialLinks.map((link) => (
           <li className="group">
             <a
-              className="inline-flex items-center gap-2 px-2.5 h-6 bg-zinc-100 rounded-full outline-none font-medium text-xs text-secondary transition-all hover:bg-zinc-200/75 focus-visible:ring-3 focus-visible:ring-zinc-200"
+              className="text-secondary inline-flex h-6 items-center gap-2 rounded-full bg-zinc-100 px-2.5 text-xs font-medium transition-all outline-none hover:bg-zinc-200/75 focus-visible:ring-3 focus-visible:ring-zinc-200"
               href={link.href}
               target="_blank"
             >
               <Icon
                 icon={link.icon}
-                className={cn('shrink-0 size-4 data-[slot="x"]:size-3.5', link.fill)}
+                className={cn('size-4 shrink-0 data-[slot="x"]:size-3.5', link.fill)}
                 data-slot={link.slot}
               />
               {link.label}

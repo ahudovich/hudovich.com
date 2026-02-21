@@ -1,7 +1,11 @@
 {
   "$schema": "https://json.schemastore.org/prettierrc",
 
-  "plugins": ["prettier-plugin-astro", "@ianvs/prettier-plugin-sort-imports"],
+  "plugins": [
+    "prettier-plugin-astro",
+    "@ianvs/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss"
+  ],
 
   "overrides": [
     {
@@ -17,14 +21,18 @@
   "singleQuote": true,
   "trailingComma": "es5",
 
+  "tailwindFunctions": ["cn", "cva"],
+
   "importOrderTypeScriptVersion": "5.0.0",
   "importOrder": [
     "<BUILTIN_MODULES>",
     "^astro",
+    "^react",
     "<THIRD_PARTY_MODULES>",
     "^@/",
     "^[.]",
     "<TYPES>^astro",
+    "<TYPES>^react",
     "<TYPES>",
     "<TYPES>^@/",
     "<TYPES>^[.]"
