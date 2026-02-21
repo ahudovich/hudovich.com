@@ -2,8 +2,8 @@
 import '@/styles/global.css'
 import { Font } from 'astro:assets'
 import SpeedInsights from '@vercel/speed-insights/astro'
-import Footer from '@/components/layout/Footer.astro'
-import Header from '@/components/layout/Header.astro'
+import { Footer } from '@/components/layout/Footer'
+import { Header } from '@/components/layout/Header'
 import PostHog from '@/components/PostHog.astro'
 
 interface Props {
@@ -78,7 +78,7 @@ const openGraphImageType = 'image/png'
     <PostHog />
   </head>
 
-  <body class="h-dvh px-4 font-mono text-md text-primary antialiased sm:px-8">
+  <body>
     <Header />
     <main>
       <slot />

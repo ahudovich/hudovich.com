@@ -1,10 +1,11 @@
 import { defineConfig, fontProviders } from 'astro/config'
 import mdx from '@astrojs/mdx'
+import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  integrations: [mdx(), sitemap()],
+  integrations: [mdx(), sitemap(), react()],
 
   vite: {
     plugins: [tailwindcss()],
@@ -38,9 +39,5 @@ export default defineConfig({
         fallbacks: ['monospace'],
       },
     ],
-
-    svgo: {
-      multipass: true,
-    },
   },
 })

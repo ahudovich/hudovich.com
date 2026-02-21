@@ -1,10 +1,11 @@
 ---
+import { Image } from 'astro:assets'
 import avatar from '@/assets/images/avatar.png'
-import HomeContact from '@/components/pages/home/HomeContact.astro'
-import HomeHero from '@/components/pages/home/HomeHero.astro'
-import HomeSocials from '@/components/pages/home/HomeSocials.astro'
-import HomeProjects from '@/components/pages/home/projects/HomeProjects.astro'
-import links from '@/data/links.json'
+import { HomeContact } from '@/components/pages/home/HomeContact'
+import { HomeHero } from '@/components/pages/home/HomeHero'
+import { HomeSocials } from '@/components/pages/home/HomeSocials'
+import { HomeProjects } from '@/components/pages/home/projects/HomeProjects'
+import { links } from '@/data/links'
 import Layout from '@/layouts/Layout.astro'
 import type { ProfilePage, WithContext } from 'schema-dts'
 
@@ -55,9 +56,40 @@ const profilePageSchema: WithContext<ProfilePage> = {
   </Fragment>
 
   <div class="mx-auto pt-6 pb-12 max-w-160 space-y-12 sm:py-10">
-    <HomeHero />
+    <HomeHero>
+      <Image
+        class="size-11 rounded-full"
+        src={avatar}
+        alt="Andrei Hudovich"
+        width={44}
+        height={44}
+        densities={[1.5, 2]}
+        loading="eager"
+        draggable={false}
+      />
+    </HomeHero>
     <HomeProjects />
     <HomeSocials />
     <HomeContact />
   </div>
 </Layout>
+
+<script>
+  import hotkeys from 'hotkeys-js'
+
+  const calcomElement = document.querySelector('[data-calcom]')
+  const emailElement = document.querySelector('[data-email]')
+
+  const calcomAnchor = calcomElement instanceof HTMLAnchorElement ? calcomElement : null
+  const emailAnchor = emailElement instanceof HTMLAnchorElement ? emailElement : null
+
+  hotkeys('b', (event) => {
+    event.preventDefault()
+    calcomAnchor?.click()
+  })
+
+  hotkeys('e', (event) => {
+    event.preventDefault()
+    emailAnchor?.click()
+  })
+</script>

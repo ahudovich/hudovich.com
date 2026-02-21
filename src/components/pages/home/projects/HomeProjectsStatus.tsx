@@ -1,7 +1,5 @@
----
 import { cva } from 'cva'
 import { cn } from '@/lib/utils'
-import type { HTMLAttributes } from 'astro/types'
 import type { VariantProps } from 'cva'
 import type { ProjectStatusType } from '@/lib/types'
 
@@ -19,21 +17,25 @@ const projectStatusVariants = cva({
   },
 })
 
-type ProjectStatusVariantProps = VariantProps<typeof projectStatusVariants>
-
-interface Props extends HTMLAttributes<'span'> {
-  status: NonNullable<ProjectStatusVariantProps['status']>
-}
-
-const { class: className, status, ...props } = Astro.props
-
 const statusLabels: Record<ProjectStatusType, string> = {
   active: 'Active',
   sold: 'Sold',
   development: 'In development',
 }
----
 
-<span class={cn(projectStatusVariants({ status }), className)} {...props}>
-  {statusLabels[status]}
-</span>
+export function HomeProjectsStatus({
+  className,
+  status = 'active',
+  ...props
+}: React.ComponentProps<'span'> & VariantProps<typeof projectStatusVariants>) {
+  return (
+    <span
+      className={cn(projectStatusVariants({ status }), className)}
+      data-slot="status"
+      data-status={status}
+      {...props}
+    >
+      {statusLabels[status]}
+    </span>
+  )
+}
