@@ -30,6 +30,7 @@ export function HomeProjectsCard({
       )}
       href={href}
       target={href ? '_blank' : undefined}
+      rel={href ? 'noreferrer' : undefined}
       {...props}
     >
       <div className="mb-2 flex items-center gap-2">

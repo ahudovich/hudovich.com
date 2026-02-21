@@ -69,10 +69,11 @@ export function HomeSocials() {
 
       <ul className="flex flex-wrap items-center gap-2.5">
         {socialLinks.map((link) => (
-          <li className="group">
+          <li key={link.slot} className="group">
             <a
               className="text-secondary inline-flex h-6 items-center gap-2 rounded-full bg-zinc-100 px-2.5 text-xs font-medium transition-all outline-none hover:bg-zinc-200/75 focus-visible:ring-3 focus-visible:ring-zinc-200"
               href={link.href}
+              rel="noreferrer"
               target="_blank"
             >
               <Icon

@@ -26,6 +26,7 @@ export function HomeContact() {
           className="group text-foreground inline-flex items-center gap-1 font-medium"
           href={links.calcom}
           target="_blank"
+          rel="noreferrer"
         >
           <span className="after:bg-primary relative inline-block after:absolute after:inset-x-0 after:-bottom-px after:h-px after:transition-all after:duration-300 group-hover:after:h-0.5">
             Cal.com
