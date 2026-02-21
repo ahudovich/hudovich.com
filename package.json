@@ -41,6 +41,7 @@
     "@astrojs/check": "^0.9.6",
     "@eslint/js": "^10.0.1",
     "@ianvs/prettier-plugin-sort-imports": "4.7.1",
+    "@posthog/types": "^1.352.0",
     "@tailwindcss/vite": "^4.1.18",
     "@typescript-eslint/parser": "^8.56.0",
     "eslint": "^10.0.0",
