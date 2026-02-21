@@ -71,6 +71,10 @@ const openGraphImageType = 'image/png'
     <meta name="twitter:image:height" content={openGraphImageHeight} />
     <meta name="twitter:image:type" content={openGraphImageType} />
 
+    <!-- Additional head content -->
+    <slot name="head" />
+
+    <!-- Analytics -->
     <PostHog />
   </head>
 

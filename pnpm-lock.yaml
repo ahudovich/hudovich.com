@@ -78,6 +78,9 @@ importers:
       prettier-plugin-astro:
         specifier: 0.14.1
         version: 0.14.1
+      schema-dts:
+        specifier: ^1.1.5
+        version: 1.1.5
       tailwindcss:
         specifier: ^4.1.18
         version: 4.1.18
@@ -2856,6 +2859,9 @@ packages:
   sax@1.4.4:
     resolution: {integrity: sha512-1n3r/tGXO6b6VXMdFT54SHzT9ytu9yr7TaELowdYpMqY/Ao7EnlQGmAQ1+RatX7Tkkdm6hONI2owqNx2aZj5Sw==}
     engines: {node: '>=11.0.0'}
+
+  schema-dts@1.1.5:
+    resolution: {integrity: sha512-RJr9EaCmsLzBX2NDiO5Z3ux2BVosNZN5jo0gWgsyKvxKIUL5R3swNvoorulAeL9kLB0iTSX7V6aokhla2m7xbg==}
 
   semver@7.7.4:
     resolution: {integrity: sha512-vFKC2IEtQnVhpT78h1Yp8wzwrf8CM+MzKMHGJZfBtzhZNycRFnXsHk6E5TxIkkMsgNS7mdX3AGB7x2QM2di4lA==}
@@ -6745,6 +6751,8 @@ snapshots:
       suf-log: 2.5.3
 
   sax@1.4.4: {}
+
+  schema-dts@1.1.5: {}
 
   semver@7.7.4: {}
 

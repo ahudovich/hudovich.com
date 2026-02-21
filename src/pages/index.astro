@@ -1,15 +1,59 @@
 ---
+import avatar from '@/assets/images/avatar.png'
 import HomeContact from '@/components/pages/home/HomeContact.astro'
 import HomeHero from '@/components/pages/home/HomeHero.astro'
 import HomeSocials from '@/components/pages/home/HomeSocials.astro'
 import HomeProjects from '@/components/pages/home/projects/HomeProjects.astro'
+import links from '@/data/links.json'
 import Layout from '@/layouts/Layout.astro'
+import type { ProfilePage, WithContext } from 'schema-dts'
+
+const profileName = 'Andrei Hudovich'
+const profileDescription = 'A senior software engineer based in Wroclaw, Poland.'
+
+const siteURL = Astro.site ?? Astro.url.origin
+const canonicalProfileURL = new URL(siteURL).origin
+const avatarImageURL = new URL(avatar.src, siteURL).toString()
+
+const profilePageSchema: WithContext<ProfilePage> = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+
+  mainEntity: {
+    '@type': 'Person',
+    name: profileName,
+    identifier: canonicalProfileURL,
+    description: profileDescription,
+    url: canonicalProfileURL,
+    email: links.email,
+    image: avatarImageURL,
+
+    homeLocation: {
+      '@type': 'Place',
+      name: 'Wroclaw, Poland',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Wroclaw',
+        addressCountry: 'PL',
+      },
+    },
+
+    sameAs: [
+      links.social.x,
+      links.social.threads,
+      links.social.bluesky,
+      links.social.linkedin,
+      links.social.substack,
+    ],
+  },
+}
 ---
 
-<Layout
-  title="Andrei Hudovich"
-  description="A senior software engineer and solopreneur based in Wroclaw, Poland."
->
+<Layout title={profileName} description={profileDescription}>
+  <Fragment slot="head">
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(profilePageSchema)} />
+  </Fragment>
+
   <div class="mx-auto pt-6 pb-12 max-w-160 space-y-12 sm:py-10">
     <HomeHero />
     <HomeProjects />
