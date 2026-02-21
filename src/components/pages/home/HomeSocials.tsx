@@ -71,7 +71,7 @@ export function HomeSocials() {
         {socialLinks.map((link) => (
           <li className="group">
             <a
-              className="inline-flex items-center gap-2 px-2.5 h-6 bg-zinc-100 rounded-full outline-none font-medium text-xs text-secondary transition-all hover:bg-zinc-200/75 focus:ring-3 focus:ring-zinc-200"
+              className="inline-flex items-center gap-2 px-2.5 h-6 bg-zinc-100 rounded-full outline-none font-medium text-xs text-secondary transition-all hover:bg-zinc-200/75 focus-visible:ring-3 focus-visible:ring-zinc-200"
               href={link.href}
               target="_blank"
             >
