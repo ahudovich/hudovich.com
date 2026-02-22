@@ -1,4 +1,6 @@
+import { Suspense } from 'react'
 import { FavouriteIcon, GitForkIcon } from '@hugeicons/core-free-icons'
+import { FooterYear } from '@/components/layout/FooterYear'
 import { Icon } from '@/components/ui/Icon'
 import { links } from '@/data/links.json'
 import { cn } from '@/lib/utils'
@@ -15,7 +17,11 @@ export function Footer({ className, ...props }: React.ComponentProps<'footer'>) 
     >
       <p className="group flex items-center gap-1.5 text-sm text-muted-foreground sm:text-xs">
         <span>
-          &copy; <span>{new Date().getFullYear()}</span> Built with
+          &copy;{' '}
+          <Suspense fallback={null}>
+            <FooterYear />
+          </Suspense>{' '}
+          Built with
         </span>
         <Icon
           icon={FavouriteIcon}
