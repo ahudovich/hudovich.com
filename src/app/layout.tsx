@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Footer } from '@/components/layout/Footer'
 import { Header } from '@/components/layout/Header'
+import { ThemeProvider } from '@/components/layout/ThemeProvider'
 import { siteMetadata } from '@/data/metadata.json'
 import { env } from '@/lib/env'
 import type { Metadata } from 'next'
@@ -41,14 +42,25 @@ const fontGeistMono = Geist_Mono({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html className={`${fontGeist.variable} ${fontGeistMono.variable}`} lang="en">
+    <html
+      className={`${fontGeist.variable} ${fontGeistMono.variable}`}
+      lang="en"
+      suppressHydrationWarning
+    >
       <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem={true}
+          disableTransitionOnChange={true}
+        >
+          <Header />
+          <main>{children}</main>
+          <Footer />
 
-        {/* Vercel Speed Insights */}
-        <SpeedInsights />
+          {/* Vercel Speed Insights */}
+          <SpeedInsights />
+        </ThemeProvider>
       </body>
     </html>
   )
