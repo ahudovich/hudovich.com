@@ -6,6 +6,7 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
   ],
+  "exclude": ["node_modules"],
   "compilerOptions": {
     "module": "esnext",
     "moduleResolution": "bundler",
@@ -19,6 +20,7 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "incremental": true,
+    "allowJs": true,
     "plugins": [
       {
         "name": "next"

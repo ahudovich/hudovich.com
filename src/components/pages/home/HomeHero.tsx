@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import avatar from '@/assets/images/avatar.png'
 import { IconFlagPoland } from '@/components/icons/IconFlagPoland'
 import { buttonVariants } from '@/components/ui/Button'
 import { Hotkey } from '@/components/ui/Hotkey'
@@ -12,10 +11,10 @@ export function HomeHero(props: React.ComponentProps<'section'>) {
       <div className="mb-4">
         <Image
           className="size-11 rounded-full"
-          src={avatar}
+          src="/avatar.png"
+          width={568}
+          height={568}
           alt="Andrei Hudovich"
-          width={44}
-          height={44}
           loading="eager"
         />
       </div>
