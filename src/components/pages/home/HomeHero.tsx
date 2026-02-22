@@ -1,7 +1,8 @@
 import { IconFlagPoland } from '@/components/icons/IconFlagPoland'
-import { Button } from '@/components/ui/Button'
+import { buttonVariants } from '@/components/ui/Button'
 import { Hotkey } from '@/components/ui/Hotkey'
 import { links } from '@/data/links'
+import { cn } from '@/lib/utils'
 
 export function HomeHero({ children }: { children: React.ReactNode }) {
   return (
@@ -10,10 +11,10 @@ export function HomeHero({ children }: { children: React.ReactNode }) {
 
       <h1 className="mb-4 font-sans text-[1.375rem] leading-7 font-semibold tracking-[0.02em]">
         Hey, I&apos;m{' '}
-        <span className="text-primary border-b-[0.09375rem] border-current">Andrei Hudovich</span>!
+        <span className="text-brand border-b-[0.09375rem] border-current">Andrei Hudovich</span>!
       </h1>
 
-      <div className="mb-5 space-y-3 text-base leading-[1.75] sm:space-y-0">
+      <div className="mb-5 space-y-3 text-sm leading-[1.75] sm:space-y-0">
         <p>
           <span className="sm:mb-1.75 sm:inline-block">
             A senior software engineer based in Wroclaw, <span className="sm:hidden">Poland.</span>
@@ -28,19 +29,29 @@ export function HomeHero({ children }: { children: React.ReactNode }) {
       </div>
 
       <div className="flex items-center gap-4">
-        <Button className="min-w-33" href={links.calcom} target="_blank" data-calcom>
+        <a
+          className={cn(buttonVariants({ variant: 'default' }), 'min-w-33')}
+          href={links.calcom}
+          target="_blank"
+          rel="noreferrer"
+          data-calcom
+        >
           <Hotkey variant="primary">B</Hotkey>
           Book a call
-        </Button>
+        </a>
 
-        <Button href={`mailto:${links.email}`} variant="outline" data-email>
+        <a
+          className={cn(buttonVariants({ variant: 'outline' }))}
+          href={`mailto:${links.email}`}
+          data-email
+        >
           <Hotkey variant="secondary">E</Hotkey>
           Send an email
-        </Button>
+        </a>
       </div>
 
-      <p className="text-tertiary relative mt-4 pl-5 text-xs">
-        <span className="absolute top-1/2 left-0 size-3.5 -translate-y-1/2 rounded-full border-4 border-green-100 bg-green-500"></span>
+      <p className="text-muted-foreground relative mt-4 pl-5 text-xs">
+        <span className="absolute top-1/2 left-0 size-3.5 -translate-y-1/2 rounded-full border-4 border-green-100 bg-green-500" />
         Available for hire, let&apos;s talk!
       </p>
     </section>

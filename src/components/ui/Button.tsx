@@ -1,35 +1,47 @@
+import { Button as ButtonPrimitive } from '@base-ui/react/button'
 import { cva } from 'cva'
 import { cn } from '@/lib/utils'
 import type { VariantProps } from 'cva'
 
-const buttonVariants = cva({
+export const buttonVariants = cva({
   base: [
-    'inline-flex h-8 cursor-pointer items-center justify-center gap-2 rounded-full border border-transparent px-4 font-sans text-sm font-medium whitespace-nowrap transition-all outline-none select-none',
-    'focus-visible:ring-3 focus-visible:ring-zinc-200 disabled:pointer-events-none disabled:opacity-50',
-    '[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg]:fill-current [&_svg:not([class*="size-"])]:size-4',
+    'group/button inline-flex shrink-0 items-center justify-center rounded-full border border-transparent text-[13px] font-sans font-medium whitespace-nowrap transition-all outline-none select-none',
+    'disabled:pointer-events-none disabled:opacity-50',
+    'focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3',
+    "[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   ],
   variants: {
     variant: {
-      default: 'bg-foreground text-primary-foreground hover:bg-foreground/90',
+      default: 'bg-primary text-primary-foreground [a]:hover:bg-primary/80',
+      outline:
+        'border-border bg-background hover:bg-muted hover:text-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50',
       secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
-      outline: 'bg-background border-border text-foreground hover:bg-muted',
-      ghost: 'text-foreground hover:bg-muted',
+      ghost: 'hover:bg-muted hover:text-foreground dark:hover:bg-muted/50',
+      link: 'text-primary underline-offset-4 hover:underline',
+    },
+    size: {
+      default:
+        'h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2',
+      icon: 'size-8',
     },
   },
   defaultVariants: {
     variant: 'default',
+    size: 'default',
   },
 })
 
 export function Button({
   className,
   variant = 'default',
-  children,
+  size = 'default',
   ...props
-}: React.ComponentProps<'a'> & VariantProps<typeof buttonVariants>) {
+}: ButtonPrimitive.Props & VariantProps<typeof buttonVariants>) {
   return (
-    <a className={cn(buttonVariants({ variant }), className)} {...props}>
-      {children}
-    </a>
+    <ButtonPrimitive
+      className={cn(buttonVariants({ variant, size }), className)}
+      data-slot="button"
+      {...props}
+    />
   )
 }

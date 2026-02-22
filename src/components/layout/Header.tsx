@@ -5,12 +5,8 @@ export function Header({ className, ...props }: React.ComponentProps<'header'>) 
   return (
     <header className={cn('mx-auto flex h-16 items-center', className)} {...props}>
       <div className="flex items-center gap-1 select-none">
-        <span className="relative z-1 shrink-0 bg-white">
-          <Logo className="text-primary size-5" />
-        </span>
-        <span className="text-secondary text-[1.0625rem] leading-5 font-bold tracking-[0.025em] uppercase">
-          AH
-        </span>
+        <Logo className="text-brand size-5 shrink-0" />
+        <span className="text-[1.0625rem] font-bold tracking-[0.025em]">AH</span>
       </div>
     </header>
   )

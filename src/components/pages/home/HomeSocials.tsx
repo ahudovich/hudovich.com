@@ -10,6 +10,7 @@ import {
   SectionHeaderText,
   SectionHeaderTitle,
 } from '@/components/layout/SectionHeader'
+import { Badge } from '@/components/ui/Badge'
 import { Icon } from '@/components/ui/Icon'
 import { links } from '@/data/links'
 import { cn } from '@/lib/utils'
@@ -70,19 +71,20 @@ export function HomeSocials() {
       <ul className="flex flex-wrap items-center gap-2.5">
         {socialLinks.map((link) => (
           <li key={link.slot} className="group">
-            <a
-              className="text-secondary inline-flex h-6 items-center gap-2 rounded-full bg-zinc-100 px-2.5 text-xs font-medium transition-all outline-none hover:bg-zinc-200/75 focus-visible:ring-3 focus-visible:ring-zinc-200"
-              href={link.href}
-              rel="noreferrer"
-              target="_blank"
-            >
-              <Icon
-                icon={link.icon}
-                className={cn('size-4 shrink-0 data-[slot="x"]:size-3.5', link.fill)}
-                data-slot={link.slot}
-              />
-              {link.label}
-            </a>
+            <Badge
+              className="gap-1.75"
+              variant="secondary"
+              render={
+                <a href={link.href} target="_blank" rel="noreferrer">
+                  <Icon
+                    icon={link.icon}
+                    className={cn('data-[slot="x"]:size-3.5', link.fill)}
+                    data-slot={link.slot}
+                  />
+                  {link.label}
+                </a>
+              }
+            />
           </li>
         ))}
       </ul>

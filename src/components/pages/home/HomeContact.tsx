@@ -1,4 +1,5 @@
 import { SectionHeader, SectionHeaderTitle } from '@/components/layout/SectionHeader'
+import { TextLink } from '@/components/TextLink'
 import { links } from '@/data/links'
 
 export function HomeContact() {
@@ -8,31 +9,19 @@ export function HomeContact() {
         <SectionHeaderTitle>Get in touch</SectionHeaderTitle>
       </SectionHeader>
 
-      <p className="mb-1.5">
-        You can reach me <span className="xs:inline hidden">anytime</span> at{' '}
-        <a
-          className="group text-foreground inline-flex items-center gap-1 font-medium"
-          href={`mailto:${links.email}`}
-        >
-          <span className="after:bg-primary relative inline-block after:absolute after:inset-x-0 after:-bottom-px after:h-px after:transition-all after:duration-300 group-hover:after:h-0.5">
-            {links.email}
-          </span>
-        </a>
-      </p>
+      <div className="space-y-2">
+        <p>
+          You can reach me <span className="xs:inline hidden">anytime</span> at{' '}
+          <TextLink href={`mailto:${links.email}`}>{links.email}</TextLink>
+        </p>
 
-      <p>
-        Or book a call on{' '}
-        <a
-          className="group text-foreground inline-flex items-center gap-1 font-medium"
-          href={links.calcom}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <span className="after:bg-primary relative inline-block after:absolute after:inset-x-0 after:-bottom-px after:h-px after:transition-all after:duration-300 group-hover:after:h-0.5">
+        <p>
+          Or book a call on{' '}
+          <TextLink href={links.calcom} target="_blank" rel="noreferrer">
             Cal.com
-          </span>
-        </a>
-      </p>
+          </TextLink>
+        </p>
+      </div>
     </section>
   )
 }

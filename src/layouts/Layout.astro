@@ -5,6 +5,7 @@ import SpeedInsights from '@vercel/speed-insights/astro'
 import { Footer } from '@/components/layout/Footer'
 import { Header } from '@/components/layout/Header'
 import PostHog from '@/components/PostHog.astro'
+import { DATA_ATTRIBUTE_YEAR } from '@/lib/constants'
 
 interface Props {
   title: string
@@ -89,3 +90,12 @@ const openGraphImageType = 'image/png'
     <SpeedInsights />
   </body>
 </html>
+
+<script is:inline define:vars={{ DATA_ATTRIBUTE_YEAR }}>
+  const currentYear = String(new Date().getFullYear())
+  const yearElement = document.querySelector(`[${DATA_ATTRIBUTE_YEAR}]`)
+
+  if (yearElement) {
+    yearElement.textContent = currentYear
+  }
+</script>
