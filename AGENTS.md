@@ -23,9 +23,6 @@ A Next.js application for the personal website.
 # Install dependencies
 pnpm add
 
-# Build
-pnpm build:local
-
 # Type checking, linting, and formatting
 pnpm typecheck
 pnpm lint
