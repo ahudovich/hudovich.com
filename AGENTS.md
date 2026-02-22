@@ -3,15 +3,19 @@
 This file provides guidance to AI coding agents when working with code in this repository.
 
 ## Project Overview
-An Astro application for the personal website.
+
+A Next.js application for the personal website.
 
 ## Development
 
 ### Tech stack
 
-- Astro as the frontend framework
-- Tailwind CSS for styling
+- Next.js as the fullstack framework
+- React as the frontend library
 - TypeScript as primary language
+- Shadcn UI for components
+- Tailwind CSS for styling
+- PostHog for analytics
 
 ### Scripts
 
@@ -30,6 +34,6 @@ pnpm format
 
 ## Working agreements
 
-- Prefer `pnpm` when working with dependencies
+- Use `pnpm` when working with dependencies
 - Ask for confirmation before adding new production dependencies
 - Format any files that you modify or add

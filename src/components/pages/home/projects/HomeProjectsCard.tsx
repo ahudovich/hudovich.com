@@ -30,7 +30,7 @@ export function HomeProjectsCard({
   return (
     <a
       className={cn(
-        'bg-card border-border block rounded-lg border p-3',
+        'block rounded-lg border border-border bg-card p-3',
         href && [
           'group relative cursor-pointer ring-3 ring-transparent transition-all outline-none',
           'hover:border-ring/50 hover:ring-ring/15 focus-visible:border-ring focus-visible:ring-ring/50',
@@ -45,8 +45,8 @@ export function HomeProjectsCard({
       <div className="mb-2 flex items-center gap-2">
         <div
           className={cn(
-            'bg-muted/50 border-border shrink-0 rounded-sm border p-0.75',
-            '*:text-foreground *:size-4'
+            'shrink-0 rounded-sm border border-border bg-muted/50 p-0.75',
+            '*:size-4 *:text-foreground'
           )}
         >
           {icon}
@@ -59,13 +59,13 @@ export function HomeProjectsCard({
         </Badge>
       </div>
 
-      <p className="text-muted-foreground text-sm">{description}</p>
+      <p className="text-sm text-muted-foreground">{description}</p>
 
       {href && (
         <Icon
           icon={LinkSquare02Icon}
           className={cn(
-            'text-ring absolute top-3 right-3 size-3.5 transform-gpu opacity-0 transition-opacity',
+            'absolute top-3 right-3 size-3.5 transform-gpu text-ring opacity-0 transition-opacity',
             'group-focus-within:opacity-100 group-hover:opacity-100'
           )}
         />

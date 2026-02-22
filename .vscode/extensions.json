@@ -1,7 +1,5 @@
 {
   "recommendations": [
-    "astro-build.astro-vscode",
-    "dbaeumer.vscode-eslint",
-    "unifiedjs.vscode-mdx"
+    "oxc.oxc-vscode"
   ]
 }

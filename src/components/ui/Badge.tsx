@@ -7,7 +7,7 @@ import type { VariantProps } from 'cva'
 export const badgeVariants = cva({
   base: [
     'group/badge inline-flex w-fit shrink-0 items-center justify-center gap-1 overflow-hidden rounded-full border border-transparent px-2 py-0.5 text-xs font-medium whitespace-nowrap outline-0 transition-all',
-    'focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]',
+    'focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50',
     'has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5',
     '[&>svg]:pointer-events-none',
   ],

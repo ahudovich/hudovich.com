@@ -8,7 +8,7 @@ import { LogoBlueskyMeter } from '@/components/logos/LogoBlueskyMeter'
 import { LogoListingCat } from '@/components/logos/LogoListingCat'
 import { HomeProjectsCard } from '@/components/pages/home/projects/HomeProjectsCard'
 import { Icon } from '@/components/ui/Icon'
-import { links } from '@/data/links'
+import { links } from '@/data/links.json'
 import type { ReactNode } from 'react'
 import type { ProjectStatusType } from '@/lib/types'
 

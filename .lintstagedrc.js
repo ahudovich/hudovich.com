@@ -1,4 +1,4 @@
 export default {
-  '*.{ts,astro,css,html}': 'prettier --check',
-  '*.{ts,astro}': ['eslint .', () => 'tsc -p tsconfig.json --noEmit'],
+  '*': 'oxfmt --no-error-on-unmatched-pattern',
+  '*.{js,ts,tsx}': ['pnpm run lint', () => 'tsc -p tsconfig.json --noEmit'],
 }

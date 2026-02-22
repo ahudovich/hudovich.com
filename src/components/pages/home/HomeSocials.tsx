@@ -12,7 +12,7 @@ import {
 } from '@/components/layout/SectionHeader'
 import { Badge } from '@/components/ui/Badge'
 import { Icon } from '@/components/ui/Icon'
-import { links } from '@/data/links'
+import { links } from '@/data/links.json'
 import { cn } from '@/lib/utils'
 import type { IconSvgElement } from '@hugeicons/react'
 

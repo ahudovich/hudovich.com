@@ -98,11 +98,7 @@
     @apply border-border outline-ring/50;
   }
 
-  html {
-    @apply font-mono;
-  }
-
   body {
-    @apply bg-background text-foreground h-dvh px-4 text-sm antialiased sm:px-8;
+    @apply h-dvh px-4 bg-background font-mono text-foreground text-sm antialiased sm:px-8;
   }
 }

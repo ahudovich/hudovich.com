@@ -6,8 +6,8 @@ const hotkeyVariants = cva({
   base: 'inline-flex size-4 shrink-0 items-center justify-center rounded border font-mono text-[0.6875rem] leading-none uppercase',
   variants: {
     variant: {
-      primary: 'bg-muted/25 text-primary-foreground border-transparent',
-      secondary: 'bg-muted border-border text-muted-foreground',
+      primary: 'border-transparent bg-muted/25 text-primary-foreground',
+      secondary: 'border-border bg-muted text-muted-foreground',
     },
   },
   defaultVariants: {

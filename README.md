@@ -30,10 +30,11 @@
 
 ## Built With
 
-* [Astro](https://astro.build)
-* [Tailwindcss](https://tailwindcss.com)
+- [Next.js](https://nextjs.org)
+- [Shadcn UI](https://ui.shadcn.com)
+- [Base UI](https://base-ui.com)
+- [Tailwindcss](https://tailwindcss.com)
 
 ## License
 
 This project is [MIT licensed](https://github.com/ahudovich/hudovich.com/blob/main/LICENSE).
-

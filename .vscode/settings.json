@@ -1,3 +1,11 @@
 {
-  "tailwindCSS.classFunctions": ["cva"]
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.oxc": "always"
+  },
+
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "tailwindCSS.classFunctions": ["cva"],
+  "oxc.fmt.configPath": ".oxfmtrc.json"
 }

@@ -1,6 +1,6 @@
 import { SectionHeader, SectionHeaderTitle } from '@/components/layout/SectionHeader'
 import { TextLink } from '@/components/TextLink'
-import { links } from '@/data/links'
+import { links } from '@/data/links.json'
 
 export function HomeContact() {
   return (
@@ -11,7 +11,7 @@ export function HomeContact() {
 
       <div className="space-y-2">
         <p>
-          You can reach me <span className="xs:inline hidden">anytime</span> at{' '}
+          You can reach me <span className="hidden xs:inline">anytime</span> at{' '}
           <TextLink href={`mailto:${links.email}`}>{links.email}</TextLink>
         </p>
 

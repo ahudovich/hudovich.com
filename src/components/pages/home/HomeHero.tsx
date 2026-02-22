@@ -1,17 +1,28 @@
+import Image from 'next/image'
+import avatar from '@/assets/images/avatar.png'
 import { IconFlagPoland } from '@/components/icons/IconFlagPoland'
 import { buttonVariants } from '@/components/ui/Button'
 import { Hotkey } from '@/components/ui/Hotkey'
-import { links } from '@/data/links'
+import { links } from '@/data/links.json'
 import { cn } from '@/lib/utils'
 
-export function HomeHero({ children }: { children: React.ReactNode }) {
+export function HomeHero(props: React.ComponentProps<'section'>) {
   return (
-    <section>
-      <div className="mb-4">{children}</div>
+    <section {...props}>
+      <div className="mb-4">
+        <Image
+          className="size-11 rounded-full"
+          src={avatar}
+          alt="Andrei Hudovich"
+          width={44}
+          height={44}
+          loading="eager"
+        />
+      </div>
 
       <h1 className="mb-4 font-sans text-[1.375rem] leading-7 font-semibold tracking-[0.02em]">
         Hey, I&apos;m{' '}
-        <span className="text-brand border-b-[0.09375rem] border-current">Andrei Hudovich</span>!
+        <span className="border-b-[0.09375rem] border-current text-brand">Andrei Hudovich</span>!
       </h1>
 
       <div className="mb-5 space-y-3 text-sm leading-[1.75] sm:space-y-0">
@@ -50,7 +61,7 @@ export function HomeHero({ children }: { children: React.ReactNode }) {
         </a>
       </div>
 
-      <p className="text-muted-foreground relative mt-4 pl-5 text-xs">
+      <p className="relative mt-4 pl-5 text-xs text-muted-foreground">
         <span className="absolute top-1/2 left-0 size-3.5 -translate-y-1/2 rounded-full border-4 border-green-100 bg-green-500" />
         Available for hire, let&apos;s talk!
       </p>
