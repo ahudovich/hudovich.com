@@ -1,0 +1,54 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+
+  "ignorePatterns": [
+    ".codex/**",
+    ".github/**",
+    ".husky/**",
+    ".vscode/**",
+    "public/**",
+    "out/**",
+    "build/**"
+  ],
+
+  "plugins": ["eslint", "oxc", "typescript", "jsx-a11y", "react", "nextjs"],
+
+  "env": {
+    "builtin": true,
+    "browser": true
+  },
+
+  "categories": {
+    "correctness": "deny",
+    "suspicious": "warn",
+    "pedantic": "warn"
+  },
+
+  "rules": {
+    "eslint/max-lines-per-function": "off",
+    "eslint/no-inline-comments": "off",
+
+    // Non JSX-runtime rules
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-uses-react": "off"
+  },
+
+  "settings": {
+    "react": {
+      "version": "19.2.0",
+      "linkComponents": [
+        {
+          "name": "Link",
+          "attribute": "href"
+        }
+      ]
+    },
+
+    "jsx-a11y": {
+      "components": {
+        "Link": "a",
+        "Button": "button"
+      }
+    }
+  }
+}

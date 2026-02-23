@@ -1,28 +1,16 @@
-# build output
-dist/
+# Dependencies
+/node_modules
 
-# generated types
-.astro/
+# Artifacts
+/.next/
+/out/
 
-# dependencies
-node_modules/
+# Typescript
+*.tsbuildinfo
+next-env.d.ts
 
-# logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
+# Vercel
+.vercel
 
-# environment variables
-.env
-.env.production
-
-# macOS-specific files
+# System
 .DS_Store
-
-# jetbrains setting folder
-.idea/
-.env*.local
-
-# vercel
-.vercel/

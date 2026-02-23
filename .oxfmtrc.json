@@ -1,0 +1,92 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+
+  "ignorePatterns": [
+    ".codex/**",
+    ".github/**",
+    ".husky/**",
+    ".vscode/**",
+    "public/**",
+    "out/**",
+    "build/**"
+  ],
+
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "es5",
+
+  "experimentalSortImports": {
+    "internalPattern": ["@/"],
+    "newlinesBetween": false,
+    "partitionByNewline": true,
+    "customGroups": [
+      {
+        "groupName": "next",
+        "elementNamePattern": ["next", "next/**/*"],
+        "modifiers": ["value"]
+      },
+      {
+        "groupName": "next-third-party",
+        "elementNamePattern": ["next-*"],
+        "modifiers": ["value"]
+      },
+      {
+        "groupName": "react",
+        "elementNamePattern": ["react", "react-dom"],
+        "modifiers": ["value"]
+      },
+      {
+        "groupName": "react-third-party",
+        "elementNamePattern": ["react-*"],
+        "modifiers": ["value"]
+      },
+      {
+        "groupName": "type-next",
+        "elementNamePattern": ["next", "next/**/*"],
+        "modifiers": ["type"]
+      },
+      {
+        "groupName": "type-next-third-party",
+        "elementNamePattern": ["next-*"],
+        "modifiers": ["type"]
+      },
+      {
+        "groupName": "type-react",
+        "elementNamePattern": ["react"],
+        "modifiers": ["type"]
+      },
+      {
+        "groupName": "type-react-third-party",
+        "elementNamePattern": ["react-*"],
+        "modifiers": ["type"]
+      }
+    ],
+    "groups": [
+      "next",
+      "next-third-party",
+      "react",
+      "react-third-party",
+      "builtin",
+      "external",
+      "internal",
+      "parent",
+      "sibling",
+      "index",
+      "type-next",
+      "type-next-third-party",
+      "type-react",
+      "type-react-third-party",
+      "type-builtin",
+      "type-external",
+      "type-internal",
+      "type-parent",
+      "type-sibling",
+      "type-index"
+    ]
+  },
+
+  "experimentalTailwindcss": {
+    "stylesheet": "./src/app/global.css",
+    "functions": ["cn", "cva"]
+  }
+}
