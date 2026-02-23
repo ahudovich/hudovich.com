@@ -1,3 +1,4 @@
+import { Container } from '@/components/layout/Container'
 import { HomeContact } from '@/components/pages/home/HomeContact'
 import { HomeHero } from '@/components/pages/home/HomeHero'
 import { HomeSocials } from '@/components/pages/home/HomeSocials'
@@ -57,12 +58,12 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageSchema) }}
       />
 
-      <div className="mx-auto max-w-160 space-y-12 pt-6 pb-12 sm:py-10">
+      <Container className="space-y-12 pt-6 pb-12 sm:py-10">
         <HomeHero />
         <HomeProjects />
         <HomeSocials />
         <HomeContact />
-      </div>
+      </Container>
     </>
   )
 }

@@ -7,7 +7,7 @@ export const buttonVariants = cva({
   base: [
     'group/button inline-flex shrink-0 items-center justify-center rounded-full border border-transparent font-sans text-[13px] font-medium whitespace-nowrap transition-all outline-none select-none',
     'disabled:pointer-events-none disabled:opacity-50',
-    'focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50',
+    'focus-visible:ring-3 focus-visible:ring-ring/50',
     "[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   ],
   variants: {
@@ -20,7 +20,7 @@ export const buttonVariants = cva({
       link: 'text-primary underline-offset-4 hover:underline',
     },
     size: {
-      default: 'h-8 gap-1.5 px-4 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2',
+      default: 'h-8 gap-1.5 px-4',
       icon: 'size-8',
     },
   },

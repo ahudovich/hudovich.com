@@ -33,7 +33,7 @@ export function HomeProjectsCard({
         'block rounded-lg border border-border bg-card p-3',
         href && [
           'group relative cursor-pointer ring-3 ring-transparent transition-all outline-none',
-          'hover:border-ring/50 hover:ring-ring/15 focus-visible:border-ring focus-visible:ring-ring/50 dark:hover:border-ring/35',
+          'hover:ring-ring/15 focus-visible:ring-ring/50',
         ],
         className
       )}

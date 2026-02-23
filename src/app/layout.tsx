@@ -47,7 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="en"
       suppressHydrationWarning
     >
-      <body>
+      <body className="h-dvh bg-background font-mono text-sm text-foreground antialiased">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

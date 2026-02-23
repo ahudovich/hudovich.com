@@ -97,8 +97,4 @@
   * {
     @apply border-border outline-ring/50;
   }
-
-  body {
-    @apply h-dvh px-4 bg-background font-mono text-foreground text-sm antialiased sm:px-8;
-  }
 }

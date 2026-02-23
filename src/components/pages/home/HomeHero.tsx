@@ -24,15 +24,10 @@ export function HomeHero(props: React.ComponentProps<'section'>) {
         !
       </h1>
 
-      <div className="mb-5 space-y-3 text-sm leading-[1.75] sm:space-y-0">
-        <p>
-          <span className="sm:mb-1.75 sm:inline-block">
-            A senior software engineer based in Wroclaw, <span className="sm:hidden">Poland.</span>
-            <span className="hidden sm:inline-flex sm:items-center sm:gap-1.5">
-              Poland
-              <IconFlagPoland className="h-2.25 w-3 shrink-0 rounded-xs drop-shadow-[0_0_1px_rgba(0,0,0,0.1)]" />
-            </span>
-          </span>
+      <div className="mb-5 space-y-3 text-sm leading-relaxed text-pretty sm:space-y-0">
+        <p className="sm:mb-1.75">
+          A senior software engineer based in Wroclaw,&nbsp;Poland
+          <IconFlagPoland className="ml-2 inline-block h-2.25 w-3 shrink-0 -translate-y-0.5 rounded-xs drop-shadow-[0_0_1px_rgba(0,0,0,0.1)]" />
         </p>
 
         <p>If you need a reliable developer to join your team, I&apos;m ready to dive in.</p>

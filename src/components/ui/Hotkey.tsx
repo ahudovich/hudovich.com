@@ -3,11 +3,11 @@ import { cn } from '@/lib/utils'
 import type { VariantProps } from 'cva'
 
 const hotkeyVariants = cva({
-  base: 'inline-flex size-4 shrink-0 items-center justify-center rounded border font-mono text-[0.6875rem] leading-none uppercase',
+  base: 'inline-flex size-4 shrink-0 items-center justify-center rounded font-mono text-[0.6875rem] leading-none uppercase',
   variants: {
     variant: {
-      primary: 'border-transparent bg-muted/25 text-primary-foreground',
-      secondary: 'border-border bg-muted text-muted-foreground',
+      primary: 'bg-muted/25 text-primary-foreground dark:bg-muted/15',
+      secondary: 'bg-border/75 text-muted-foreground',
     },
   },
   defaultVariants: {
