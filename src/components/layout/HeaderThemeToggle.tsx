@@ -2,6 +2,7 @@
 
 import { useTheme } from 'next-themes'
 import { useState } from 'react'
+import { useHotkeys } from 'react-hotkeys-hook'
 import { useMount } from 'react-use'
 import { Moon02Icon, Sun03Icon } from '@hugeicons/core-free-icons'
 import { Button } from '@/components/ui/Button'
@@ -17,6 +18,12 @@ export function HeaderThemeToggle({ className, ...props }: React.ComponentProps<
     setIsMounted(true)
   })
 
+  useHotkeys('t', () => toggleTheme(), [resolvedTheme])
+
+  function toggleTheme() {
+    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
+  }
+
   return (
     <Button
       className={cn(isMounted ? 'visible' : 'pointer-events-none invisible', className)}
@@ -24,7 +31,7 @@ export function HeaderThemeToggle({ className, ...props }: React.ComponentProps<
       size="icon"
       tabIndex={isMounted ? undefined : -1}
       aria-hidden={isMounted ? undefined : true}
-      onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+      onClick={toggleTheme}
       {...props}
     >
       <span className="sr-only">Toggle theme</span>
