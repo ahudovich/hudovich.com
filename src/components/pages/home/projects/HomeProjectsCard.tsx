@@ -8,7 +8,7 @@ import type { ProjectStatusType } from '@/lib/types'
 const statusLabels: Record<ProjectStatusType, { label: string; variant: BadgeVariant }> = {
   active: { label: 'Active', variant: 'emerald' },
   sold: { label: 'Sold', variant: 'orange' },
-  development: { label: 'In development', variant: 'blue' },
+  development: { label: 'In development', variant: 'sky' },
 }
 
 interface HomeProjectsCardProps extends React.ComponentProps<'a'> {
