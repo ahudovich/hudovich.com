@@ -1,7 +1,9 @@
 {
   "name": "hudovich.com",
   "version": "2.0.0",
+  "packageManager": "pnpm@10.30.1+sha512.3590e550d5384caa39bd5c7c739f72270234b2f6059e13018f975c313b1eb9fefcc09714048765d4d9efe961382c312e624572c0420762bdc5d5940cdf9be73a",
   "private": true,
+  "type": "module",
   "homepage": "https://hudovich.com",
   "author": {
     "name": "Andrei Hudovich",
@@ -11,7 +13,6 @@
     "type": "git",
     "url": "https://github.com/ahudovich/hudovich.com"
   },
-  "type": "module",
   "scripts": {
     "prepare": "husky",
     "start": "next start",
@@ -58,9 +59,5 @@
     "schema-dts": "^1.1.5",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3"
-  },
-  "browserslist": [
-    "last 2 Chrome versions"
-  ],
-  "packageManager": "pnpm@10.30.1+sha512.3590e550d5384caa39bd5c7c739f72270234b2f6059e13018f975c313b1eb9fefcc09714048765d4d9efe961382c312e624572c0420762bdc5d5940cdf9be73a"
+  }
 }

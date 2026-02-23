@@ -88,5 +88,7 @@
   "experimentalTailwindcss": {
     "stylesheet": "./src/app/global.css",
     "functions": ["cn", "cva"]
-  }
+  },
+
+  "experimentalSortPackageJson": false
 }
