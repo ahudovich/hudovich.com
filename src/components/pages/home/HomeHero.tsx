@@ -18,7 +18,10 @@ export function HomeHero(props: React.ComponentProps<'section'>) {
 
       <h1 className="mb-4 font-sans text-[1.375rem] leading-7 font-semibold tracking-[0.02em]">
         Hey, I&apos;m{' '}
-        <span className="border-b-[0.09375rem] border-current text-brand">Andrei Hudovich</span>!
+        <span className="border-b-[0.09375rem] border-current text-brand dark:border-brand dark:text-foreground">
+          Andrei Hudovich
+        </span>
+        !
       </h1>
 
       <div className="mb-5 space-y-3 text-sm leading-[1.75] sm:space-y-0">
