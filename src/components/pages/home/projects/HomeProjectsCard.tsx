@@ -8,7 +8,7 @@ import type { ProjectStatusType } from '@/lib/types'
 const statusLabels: Record<ProjectStatusType, { label: string; variant: BadgeVariant }> = {
   active: { label: 'Active', variant: 'emerald' },
   sold: { label: 'Sold', variant: 'orange' },
-  development: { label: 'In development', variant: 'purple' },
+  development: { label: 'In development', variant: 'blue' },
 }
 
 interface HomeProjectsCardProps extends React.ComponentProps<'a'> {
@@ -33,7 +33,7 @@ export function HomeProjectsCard({
         'block rounded-lg border border-border bg-card p-3',
         href && [
           'group relative cursor-pointer ring-3 ring-transparent transition-all outline-none',
-          'hover:border-ring/50 hover:ring-ring/15 focus-visible:border-ring focus-visible:ring-ring/50',
+          'hover:border-ring/50 hover:ring-ring/15 focus-visible:border-ring focus-visible:ring-ring/50 dark:hover:border-ring/35',
         ],
         className
       )}
@@ -59,7 +59,7 @@ export function HomeProjectsCard({
         </Badge>
       </div>
 
-      <p className="text-sm text-muted-foreground">{description}</p>
+      <p className="text-[0.8125rem] text-muted-foreground">{description}</p>
 
       {href && (
         <Icon

@@ -40,7 +40,7 @@ export function HomeHero(props: React.ComponentProps<'section'>) {
 
       <div className="flex items-center gap-4">
         <a
-          className={cn(buttonVariants({ variant: 'default' }), 'min-w-33')}
+          className={cn(buttonVariants({ variant: 'default' }), 'mi3n-w-33')}
           href={links.calcom}
           target="_blank"
           rel="noreferrer"
@@ -51,7 +51,7 @@ export function HomeHero(props: React.ComponentProps<'section'>) {
         </a>
 
         <a
-          className={cn(buttonVariants({ variant: 'outline' }))}
+          className={cn(buttonVariants({ variant: 'outline' }), 'mi3n-w-35')}
           href={`mailto:${links.email}`}
           data-email
         >
@@ -61,7 +61,7 @@ export function HomeHero(props: React.ComponentProps<'section'>) {
       </div>
 
       <p className="relative mt-4 pl-5 text-xs text-muted-foreground">
-        <span className="absolute top-1/2 left-0 size-3.5 -translate-y-1/2 rounded-full border-4 border-green-100 bg-green-500" />
+        <span className="absolute top-1/2 left-0 size-3.5 -translate-y-1/2 rounded-full border-4 border-green-100 bg-green-500 bg-clip-padding dark:border-green-900/35 dark:bg-green-700" />
         Available for hire, let&apos;s talk!
       </p>
     </section>
