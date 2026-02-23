@@ -5,16 +5,14 @@ import { HomeHeroActions } from '@/components/pages/home/HomeHeroActions'
 export function HomeHero(props: React.ComponentProps<'section'>) {
   return (
     <section {...props}>
-      <div className="mb-4">
-        <Image
-          className="size-11 rounded-full"
-          src="/avatar.png"
-          width={568}
-          height={568}
-          alt="Andrei Hudovich"
-          loading="eager"
-        />
-      </div>
+      <Image
+        className="mb-4 size-11 rounded-full"
+        src="/avatar.png"
+        alt="Andrei Hudovich"
+        width={44}
+        height={44}
+        loading="eager"
+      />
 
       <h1 className="mb-4 font-sans text-[1.375rem] leading-7 font-semibold tracking-[0.02em]">
         Hey, I&apos;m{' '}
