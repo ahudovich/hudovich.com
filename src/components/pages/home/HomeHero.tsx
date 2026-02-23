@@ -1,9 +1,6 @@
 import Image from 'next/image'
 import { IconFlagPoland } from '@/components/icons/IconFlagPoland'
-import { buttonVariants } from '@/components/ui/Button'
-import { Hotkey } from '@/components/ui/Hotkey'
-import { links } from '@/data/links.json'
-import { cn } from '@/lib/utils'
+import { HomeHeroActions } from '@/components/pages/home/HomeHeroActions'
 
 export function HomeHero(props: React.ComponentProps<'section'>) {
   return (
@@ -38,27 +35,7 @@ export function HomeHero(props: React.ComponentProps<'section'>) {
         <p>If you need a reliable developer to join your team, I&apos;m ready to dive in.</p>
       </div>
 
-      <div className="flex items-center gap-4">
-        <a
-          className={cn(buttonVariants({ variant: 'default' }), 'mi3n-w-33')}
-          href={links.calcom}
-          target="_blank"
-          rel="noreferrer"
-          data-calcom
-        >
-          <Hotkey variant="primary">B</Hotkey>
-          Book a call
-        </a>
-
-        <a
-          className={cn(buttonVariants({ variant: 'outline' }), 'mi3n-w-35')}
-          href={`mailto:${links.email}`}
-          data-email
-        >
-          <Hotkey variant="secondary">E</Hotkey>
-          Send an email
-        </a>
-      </div>
+      <HomeHeroActions />
 
       <p className="relative mt-4 pl-5 text-xs text-muted-foreground">
         <span className="absolute top-1/2 left-0 size-3.5 -translate-y-1/2 rounded-full border-4 border-green-100 bg-green-500 bg-clip-padding dark:border-green-900/35 dark:bg-green-700" />
