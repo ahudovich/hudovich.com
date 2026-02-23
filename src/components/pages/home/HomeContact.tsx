@@ -1,5 +1,5 @@
 import { SectionHeader, SectionHeaderTitle } from '@/components/layout/SectionHeader'
-import { TextLink } from '@/components/TextLink'
+import { TextLink } from '@/components/ui/TextLink'
 import { links } from '@/data/links.json'
 
 export function HomeContact() {
