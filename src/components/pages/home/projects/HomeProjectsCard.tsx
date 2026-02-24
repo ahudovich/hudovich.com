@@ -52,20 +52,20 @@ export function HomeProjectsCard({
           {icon}
         </div>
 
-        <h3 className="text-sm font-medium">{name}</h3>
+        <h3 className="text-base font-medium">{name}</h3>
 
         <Badge variant={statusLabels[status].variant} size="sm">
           {statusLabels[status].label}
         </Badge>
       </div>
 
-      <p className="text-[0.8125rem] text-muted-foreground">{description}</p>
+      <p className="text-sm leading-relaxed text-muted-foreground">{description}</p>
 
       {href && (
         <Icon
           icon={LinkSquare02Icon}
           className={cn(
-            'absolute top-3 right-3 size-3.5 transform-gpu text-ring opacity-0 transition-opacity',
+            'absolute top-3 right-3 size-3.5 transform-gpu text-brand/75 opacity-0 transition-opacity',
             'group-focus-within:opacity-100 group-hover:opacity-100'
           )}
         />

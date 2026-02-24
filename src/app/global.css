@@ -64,7 +64,6 @@
 
 @theme inline {
   /* Fonts */
-  --font-sans: var(--font-geist);
   --font-mono: var(--font-geist-mono);
 
   /* Colors */

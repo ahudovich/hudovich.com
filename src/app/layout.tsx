@@ -1,6 +1,6 @@
 import '@/app/global.css'
 
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Geist_Mono } from 'next/font/google'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Footer } from '@/components/layout/Footer'
 import { Header } from '@/components/layout/Header'
@@ -30,11 +30,6 @@ export const metadata: Metadata = {
   },
 }
 
-const fontGeist = Geist({
-  subsets: ['latin'],
-  variable: '--font-geist',
-})
-
 const fontGeistMono = Geist_Mono({
   subsets: ['latin'],
   variable: '--font-geist-mono',
@@ -42,12 +37,8 @@ const fontGeistMono = Geist_Mono({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      className={`${fontGeist.variable} ${fontGeistMono.variable}`}
-      lang="en"
-      suppressHydrationWarning
-    >
-      <body className="h-dvh bg-background font-mono text-sm text-foreground antialiased">
+    <html className={`${fontGeistMono.variable}`} lang="en" suppressHydrationWarning>
+      <body className="h-dvh bg-background font-mono text-[15px] text-foreground antialiased">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

@@ -12,7 +12,7 @@ export function SectionHeaderTitle({ className, children, ...props }: React.Comp
   return (
     <h2
       className={cn(
-        'font-sans text-xs font-medium tracking-[0.02em] text-muted-foreground uppercase',
+        'text-xs font-semibold tracking-wider text-muted-foreground uppercase',
         className
       )}
       {...props}

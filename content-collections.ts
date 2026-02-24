@@ -7,6 +7,7 @@ const posts = defineCollection({
   include: '**/*.md',
   schema: z.object({
     title: z.string(),
+    publishedAt: z.string(),
     summary: z.string(),
     content: z.string(),
   }),
