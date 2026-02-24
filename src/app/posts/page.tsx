@@ -1,6 +1,6 @@
 import { allPosts } from 'content-collections'
 import { Container } from '@/components/layout/Container'
-import { PostItem } from '@/components/posts/PostItem'
+import { PostCard } from '@/components/posts/PostCard'
 import { Heading1 } from '@/components/typography/Heading'
 import type { Metadata } from 'next'
 
@@ -22,7 +22,7 @@ export default function PostsPage() {
         ) : (
           <div className="space-y-3">
             {allPosts.map((post) => (
-              <PostItem key={post._meta.path} post={post} />
+              <PostCard key={post._meta.path} post={post} />
             ))}
           </div>
         )}

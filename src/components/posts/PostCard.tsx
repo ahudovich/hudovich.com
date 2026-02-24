@@ -2,14 +2,9 @@ import Link from 'next/link'
 import { ArrowRightBigIcon } from '@hugeicons/core-free-icons'
 import { Icon } from '@/components/ui/Icon'
 import { cn } from '@/lib/utils'
-import type { Route } from 'next'
 import type { Post } from 'content-collections'
 
-type PostItemProps = {
-  post: Post
-}
-
-export function PostItem({ post }: PostItemProps) {
+export function PostCard({ post }: { post: Post }) {
   return (
     <article>
       <Link
@@ -18,7 +13,7 @@ export function PostItem({ post }: PostItemProps) {
           'rounded-lg border border-border bg-card ring-3 ring-transparent outline-none',
           'hover:ring-ring/15 focus-visible:ring-ring/50'
         )}
-        href={`/posts/${post._meta.path}` as Route}
+        href={`/posts/${post._meta.path}`}
       >
         <h3 className="mb-1.5 text-base font-medium">{post.title}</h3>
         <p className="line-clamp-2 text-sm leading-relaxed text-muted-foreground">{post.summary}</p>
