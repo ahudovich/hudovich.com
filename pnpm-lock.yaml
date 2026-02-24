@@ -72,9 +72,6 @@ importers:
       '@content-collections/next':
         specifier: ^0.2.11
         version: 0.2.11(@content-collections/core@0.14.1(typescript@5.9.3))(next@16.1.6(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))
-      '@posthog/types':
-        specifier: ^1.352.0
-        version: 1.352.0
       '@tailwindcss/postcss':
         specifier: ^4.2.0
         version: 4.2.0
