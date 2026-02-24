@@ -1,6 +1,7 @@
 import { Container } from '@/components/layout/Container'
 import { HomeContact } from '@/components/pages/home/HomeContact'
 import { HomeHero } from '@/components/pages/home/HomeHero'
+import { HomePosts } from '@/components/pages/home/HomePosts'
 import { HomeSocials } from '@/components/pages/home/HomeSocials'
 import { HomeProjects } from '@/components/pages/home/projects/HomeProjects'
 import { links } from '@/data/links.json'
@@ -60,6 +61,7 @@ export default function HomePage() {
 
       <Container className="space-y-12 pt-6 pb-12 sm:py-10">
         <HomeHero />
+        <HomePosts />
         <HomeProjects />
         <HomeSocials />
         <HomeContact />
