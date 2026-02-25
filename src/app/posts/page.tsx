@@ -1,7 +1,6 @@
 import { allPosts } from 'content-collections'
 import { Container } from '@/components/layout/Container'
 import { PostCard } from '@/components/posts/PostCard'
-import { Heading1 } from '@/components/typography/Heading'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -15,7 +14,7 @@ export default function PostsPage() {
   return (
     <Container>
       <section>
-        <Heading1 className="mb-4">All posts</Heading1>
+        <h1 className="mb-4 font-heading text-2xl font-semibold">All posts</h1>
 
         {allPosts.length === 0 ? (
           <p>No posts yet.</p>

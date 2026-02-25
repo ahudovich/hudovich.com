@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation'
 import { allPosts } from 'content-collections'
 import { Container } from '@/components/layout/Container'
-import { Heading1 } from '@/components/typography/Heading'
 import type { Metadata } from 'next'
 
 export function generateStaticParams() {
@@ -40,7 +39,7 @@ export default async function PostPage({ params }: PageProps<'/posts/[slug]'>) {
   return (
     <Container>
       <article>
-        <Heading1 className="mb-2 text-foreground">{post.title}</Heading1>
+        <h1 className="mb-2 font-heading text-2xl font-semibold">{post.title}</h1>
         <p className="mb-6 text-sm text-muted-foreground">
           <time dateTime={post.publishedAt}>{post.publishedAt}</time>
         </p>

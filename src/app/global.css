@@ -5,12 +5,10 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --brand: oklch(0.7859 0.1674 70.04); /* custom */
-
   --background: oklch(1 0 0); /* white */
   --foreground: oklch(0.141 0.005 285.823); /* zinc-950 */
 
-  --primary: oklch(0.141 0.005 285.823); /* zinc-950 */
+  --primary: oklch(0.7859 0.1674 70.04); /* custom */
   --primary-foreground: oklch(0.985 0 0); /* zinc-50 */
   --secondary: oklch(0.967 0.001 286.375); /* zinc-100 */
   --secondary-foreground: oklch(0.141 0.005 285.823); /* zinc-950 */
@@ -31,7 +29,7 @@
   --background: oklch(0.2257 0.0194 280.25); /* custom */
   --foreground: oklch(0.871 0.006 286.286); /* zinc-300 */
 
-  --primary: oklch(0.92 0.004 286.32); /* zinc-200 */
+  --primary: oklch(0.7859 0.1674 70.04); /* custom */
   --primary-foreground: oklch(0.141 0.005 285.823); /* zinc-950 */
   --secondary: oklch(0.274 0.006 286.033); /* zinc-800 */
   --secondary-foreground: oklch(0.985 0 0); /* zinc-50 */
@@ -70,8 +68,6 @@
 
   /* Colors */
   --color-*: initial;
-  --color-brand: var(--brand);
-
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
@@ -90,7 +86,6 @@
   --color-ring: var(--ring);
 
   /* Radiuses */
-  --radius-*: initial;
   --radius: var(--radius);
 }
 

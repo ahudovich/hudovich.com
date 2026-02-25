@@ -12,7 +12,7 @@ export function TextLink({
         className={cn(
           'relative inline-block',
           'group-hover:after:h-0.5',
-          'after:absolute after:inset-x-0 after:-bottom-px after:h-px after:bg-brand after:transition-all'
+          'after:absolute after:inset-x-0 after:-bottom-px after:h-px after:bg-primary after:transition-all'
         )}
       >
         {children}

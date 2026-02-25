@@ -29,7 +29,7 @@ export function Header(props: React.ComponentProps<'header'>) {
           variant="ghost"
           render={
             <Link href="/" aria-label="Home">
-              <Logo className="size-5.5 shrink-0 text-brand" />
+              <Logo className="size-5.5 shrink-0 text-primary" />
               <span className="text-lg leading-none font-bold tracking-wider">AH</span>
             </Link>
           }

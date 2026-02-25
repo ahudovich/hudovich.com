@@ -10,7 +10,7 @@ export function PostCard({ post }: { post: Post }) {
       <Link
         className={cn(
           'group relative block cursor-pointer p-3 transition-all',
-          'rounded-lg border border-border bg-card ring-3 ring-transparent outline-none',
+          'rounded border border-border bg-card ring-3 ring-transparent outline-none',
           'hover:ring-ring/15 focus-visible:ring-ring/50'
         )}
         href={`/posts/${post._meta.path}`}
@@ -21,7 +21,7 @@ export function PostCard({ post }: { post: Post }) {
         <Icon
           icon={ArrowRightBigIcon}
           className={cn(
-            'absolute top-3 right-3 size-4 transform-gpu text-brand/75 opacity-0 transition-opacity',
+            'absolute top-3 right-3 size-4 transform-gpu text-primary/75 opacity-0 transition-opacity',
             'group-focus-within:opacity-100 group-hover:opacity-100'
           )}
         />
