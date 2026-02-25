@@ -17,8 +17,6 @@ export const containerVariants = cva({
   },
 })
 
-export type ContainerVariant = NonNullable<VariantProps<typeof containerVariants>['variant']>
-
 export function Container({
   className,
   variant = 'default',
@@ -29,7 +27,7 @@ export function Container({
     className: cn(containerVariants({ variant }), className),
   }
 
-  return useRender({
+  const element = useRender({
     defaultTagName: 'div',
     render,
     props: mergeProps<'div'>(defaultProps, props),
@@ -38,4 +36,6 @@ export function Container({
       variant,
     },
   })
+
+  return element
 }

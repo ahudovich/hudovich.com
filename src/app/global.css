@@ -23,6 +23,8 @@
 
   --border: oklch(0.92 0.004 286.32); /* zinc-200 */
   --ring: oklch(0.705 0.015 286.067); /* zinc-400 */
+
+  --radius: 0.5rem;
 }
 
 .dark {
@@ -48,15 +50,26 @@
   /* Breakpoints */
   --breakpoint-xs: 30rem; /* 480px */
 
+  /* Text */
+  --text-xs: 0.8125rem; /* 13px */
+  --text-xs--line-height: calc(1 / 0.75);
+  --text-sm: 0.875rem; /* 14px */
+  --text-sm--line-height: calc(1.25 / 0.875);
+  --text-base: 0.9375rem; /* 15px */
+  --text-base--line-height: calc(1.5 / 1);
+
   /* Transitions */
   --default-transition-duration: 300ms;
 }
 
 @theme inline {
   /* Fonts */
-  --font-mono: var(--font-geist-mono);
+  --font-*: initial;
+  --font-heading: var(--font-geist-mono);
+  --font-base: var(--font-geist-mono);
 
   /* Colors */
+  --color-*: initial;
   --color-brand: var(--brand);
 
   --color-background: var(--background);
@@ -75,6 +88,10 @@
 
   --color-border: var(--border);
   --color-ring: var(--ring);
+
+  /* Radiuses */
+  --radius-*: initial;
+  --radius: var(--radius);
 }
 
 @layer base {

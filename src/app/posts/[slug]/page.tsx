@@ -38,13 +38,13 @@ export default async function PostPage({ params }: PageProps<'/posts/[slug]'>) {
   }
 
   return (
-    <Container className="pt-6 pb-12 sm:py-10">
+    <Container>
       <article>
-        <Heading1 className="mb-2">{post.title}</Heading1>
+        <Heading1 className="mb-2 text-foreground">{post.title}</Heading1>
         <p className="mb-6 text-sm text-muted-foreground">
           <time dateTime={post.publishedAt}>{post.publishedAt}</time>
         </p>
-        {post.content}
+        <pre className="text-base leading-relaxed whitespace-pre-wrap">{post.content}</pre>
       </article>
     </Container>
   )

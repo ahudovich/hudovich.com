@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function PostsPage() {
   return (
-    <Container className="pt-6 pb-12 sm:py-10">
+    <Container>
       <section>
         <Heading1 className="mb-4">All posts</Heading1>
 

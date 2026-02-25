@@ -59,7 +59,7 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageSchema) }}
       />
 
-      <Container className="space-y-12 pt-6 pb-12 sm:py-10">
+      <Container>
         <HomeHero />
         <HomePosts />
         <HomeProjects />
