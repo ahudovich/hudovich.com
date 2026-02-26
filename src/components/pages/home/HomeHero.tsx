@@ -22,8 +22,8 @@ export function HomeHero(props: React.ComponentProps<'section'>) {
         Hey, I&apos;m <span className="border-b-[0.09375rem] border-primary">Andrei Hudovich</span>!
       </h1>
 
-      <div className="mb-5 space-y-3 leading-relaxed text-pretty sm:space-y-0">
-        <p className="sm:mb-1.75">
+      <div className="mb-5 space-y-3 leading-relaxed text-pretty sm:space-y-1.5">
+        <p>
           A senior software engineer based in Wroclaw,&nbsp;Poland
           <IconFlagPoland
             className={cn(
@@ -44,12 +44,12 @@ export function HomeHero(props: React.ComponentProps<'section'>) {
           rel="noreferrer"
         >
           <Icon icon={Calendar03Icon} />
-          Book a call
+          Book call
         </a>
 
-        <a className={cn(buttonVariants({ variant: 'outline' }))} href={`mailto:${links.email}`}>
+        <a className={cn(buttonVariants({ variant: 'secondary' }))} href={`mailto:${links.email}`}>
           <Icon icon={Mail01Icon} />
-          Send an email
+          Send email
         </a>
       </div>
     </section>
