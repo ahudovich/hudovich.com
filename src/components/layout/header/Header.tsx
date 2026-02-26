@@ -24,13 +24,15 @@ export function Header(props: React.ComponentProps<'header'>) {
     <header {...props}>
       <Container className="flex h-18 items-center gap-3 sm:gap-10" variant="wide">
         <Button
-          className="-ml-2.5 hover:bg-transparent"
+          className="-ml-2.5 gap-1 hover:bg-transparent"
           nativeButton={false}
           variant="ghost"
           render={
             <Link href="/" aria-label="Home">
               <Logo className="size-5.5 shrink-0 text-primary" />
-              <span className="text-lg leading-none font-bold tracking-wider">AH</span>
+              <span className="translate-y-px text-lg leading-none font-bold tracking-wider">
+                AH
+              </span>
             </Link>
           }
         />
