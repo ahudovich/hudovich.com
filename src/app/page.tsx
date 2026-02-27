@@ -1,8 +1,9 @@
 import { Container } from '@/components/layout/Container'
 import { HomeContact } from '@/components/pages/home/HomeContact'
 import { HomeHero } from '@/components/pages/home/HomeHero'
+import { HomePosts } from '@/components/pages/home/HomePosts'
+import { HomeProjects } from '@/components/pages/home/HomeProjects'
 import { HomeSocials } from '@/components/pages/home/HomeSocials'
-import { HomeProjects } from '@/components/pages/home/projects/HomeProjects'
 import { links } from '@/data/links.json'
 import { siteMetadata } from '@/data/metadata.json'
 import { env } from '@/lib/env'
@@ -58,8 +59,9 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageSchema) }}
       />
 
-      <Container className="space-y-12 pt-6 pb-12 sm:py-10">
+      <Container className="space-y-12">
         <HomeHero />
+        <HomePosts />
         <HomeProjects />
         <HomeSocials />
         <HomeContact />

@@ -12,7 +12,7 @@ export function SectionHeaderTitle({ className, children, ...props }: React.Comp
   return (
     <h2
       className={cn(
-        'font-sans text-xs font-medium tracking-[0.02em] text-muted-foreground uppercase',
+        'font-heading text-xs font-medium tracking-wider text-muted-foreground uppercase',
         className
       )}
       {...props}
@@ -24,7 +24,7 @@ export function SectionHeaderTitle({ className, children, ...props }: React.Comp
 
 export function SectionHeaderText({ className, children, ...props }: React.ComponentProps<'p'>) {
   return (
-    <p className={cn('mt-3', className)} {...props}>
+    <p className={cn('mt-2', className)} {...props}>
       {children}
     </p>
   )

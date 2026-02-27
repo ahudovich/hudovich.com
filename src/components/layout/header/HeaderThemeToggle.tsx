@@ -35,8 +35,8 @@ export function HeaderThemeToggle({ className, ...props }: React.ComponentProps<
       {...props}
     >
       <span className="sr-only">Toggle theme</span>
-      <Icon icon={Sun03Icon} className="dark:hidden" />
-      <Icon icon={Moon02Icon} className="hidden dark:block" />
+      <Icon className="dark:hidden" icon={Moon02Icon} />
+      <Icon className="hidden dark:block" icon={Sun03Icon} />
     </Button>
   )
 }
