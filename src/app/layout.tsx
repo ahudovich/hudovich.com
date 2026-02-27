@@ -42,7 +42,7 @@ const geistMono = Geist_Mono({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html className={`${geistMono.variable}`} lang="en" suppressHydrationWarning>
-      <body className="h-dvh bg-background font-base text-foreground antialiased">
+      <body className="h-dvh bg-background font-base text-base text-foreground antialiased">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

@@ -37,7 +37,7 @@ export function CardHeader({ className, ...props }: React.ComponentProps<'div'>)
 
 export function CardTitle({ className, render, ...props }: useRender.ComponentProps<'h2'>) {
   const defaultProps: useRender.ElementProps<'h2'> = {
-    className: cn('text-base font-medium', className),
+    className: cn('font-heading text-base font-medium', className),
   }
 
   return useRender({

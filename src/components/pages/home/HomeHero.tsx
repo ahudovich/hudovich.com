@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { Calendar03Icon, Mail01Icon } from '@hugeicons/core-free-icons'
 import { IconFlagPoland } from '@/components/icons/IconFlagPoland'
 import { buttonVariants } from '@/components/ui/Button'
@@ -22,7 +23,7 @@ export function HomeHero(props: React.ComponentProps<'section'>) {
         Hey, I&apos;m <span className="border-b-[0.09375rem] border-primary">Andrei Hudovich</span>!
       </h1>
 
-      <div className="mb-5 space-y-3 leading-relaxed text-pretty sm:space-y-1.5">
+      <div className="mb-5 space-y-3 leading-relaxed text-pretty sm:space-y-2">
         <p>
           A senior software engineer based in Wroclaw,&nbsp;Poland
           <IconFlagPoland
@@ -37,7 +38,7 @@ export function HomeHero(props: React.ComponentProps<'section'>) {
       </div>
 
       <div className="flex items-center gap-4">
-        <a
+        <Link
           className={cn(buttonVariants({ variant: 'default' }))}
           href={links.calcom}
           target="_blank"
@@ -45,12 +46,15 @@ export function HomeHero(props: React.ComponentProps<'section'>) {
         >
           <Icon icon={Calendar03Icon} />
           Book call
-        </a>
+        </Link>
 
-        <a className={cn(buttonVariants({ variant: 'secondary' }))} href={`mailto:${links.email}`}>
+        <Link
+          className={cn(buttonVariants({ variant: 'secondary' }))}
+          href={`mailto:${links.email}`}
+        >
           <Icon icon={Mail01Icon} />
           Send email
-        </a>
+        </Link>
       </div>
     </section>
   )

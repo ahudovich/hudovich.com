@@ -67,7 +67,6 @@
   --font-base: var(--font-geist-mono);
 
   /* Colors */
-  --color-*: initial;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 

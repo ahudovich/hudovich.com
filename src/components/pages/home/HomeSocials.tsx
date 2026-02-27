@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import {
   BlueskyIcon,
   Bookmark01Icon,
@@ -16,13 +17,15 @@ import { links } from '@/data/links.json'
 import { cn } from '@/lib/utils'
 import type { IconSvgElement } from '@hugeicons/react'
 
-const socialLinks: Array<{
+interface SocialLink {
   slot: string
   label: string
   icon: IconSvgElement
   href: string
   fill: string
-}> = [
+}
+
+const socialLinks: Array<SocialLink> = [
   {
     slot: 'x',
     label: 'X/Twitter',
@@ -70,19 +73,18 @@ export function HomeSocials() {
 
       <ul className="flex flex-wrap items-center gap-2.5">
         {socialLinks.map((link) => (
-          <li key={link.slot} className="group">
+          <li key={link.slot}>
             <Badge
-              className="gap-1.75"
               variant="secondary"
               render={
-                <a href={link.href} target="_blank" rel="noreferrer">
+                <Link href={link.href} target="_blank" rel="noreferrer">
                   <Icon
                     icon={link.icon}
                     className={cn('data-[slot="x"]:size-3.5', link.fill)}
                     data-slot={link.slot}
                   />
                   {link.label}
-                </a>
+                </Link>
               }
             />
           </li>
