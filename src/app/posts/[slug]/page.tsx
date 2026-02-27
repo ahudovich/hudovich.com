@@ -3,14 +3,21 @@ import { allPosts } from 'content-collections'
 import { Container } from '@/components/layout/Container'
 import type { Metadata } from 'next'
 
+// TEMP: https://nextjs.org/docs/messages/empty-generate-static-params
 export function generateStaticParams() {
-  return allPosts.map((post) => ({
-    slug: post._meta.path,
-  }))
+  return [{ slug: '__placeholder__' }]
+  // return allPosts.map((post) => ({
+  //   slug: post._meta.path,
+  // }))
 }
 
 export async function generateMetadata({ params }: PageProps<'/posts/[slug]'>): Promise<Metadata> {
   const { slug } = await params
+
+  // TEMP
+  if (slug === '__placeholder__') {
+    notFound()
+  }
 
   const post = allPosts.find((item) => item._meta.path === slug)
 
