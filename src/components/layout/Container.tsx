@@ -10,6 +10,7 @@ export const containerVariants = cva({
     variant: {
       default: 'max-w-176',
       wide: 'max-w-7xl',
+      fluid: '',
     },
   },
   defaultVariants: {

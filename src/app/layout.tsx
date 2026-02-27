@@ -50,7 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           disableTransitionOnChange={true}
         >
           <Header />
-          <main className="pt-12 pb-18">{children}</main>
+          <main className="pt-8 pb-12 sm:pt-12 sm:pb-18">{children}</main>
           <Footer />
 
           {/* Vercel Speed Insights */}

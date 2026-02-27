@@ -15,7 +15,7 @@ export function Footer({ className, ...props }: React.ComponentProps<'footer'>) 
           'flex flex-col items-center justify-center gap-4 border-t py-6 text-xs text-muted-foreground',
           'sm:flex-row sm:justify-between'
         )}
-        variant="wide"
+        variant="fluid"
       >
         <p className="group flex items-center gap-2">
           <span>

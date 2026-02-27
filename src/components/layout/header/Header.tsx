@@ -22,7 +22,7 @@ const links = [
 export function Header(props: React.ComponentProps<'header'>) {
   return (
     <header {...props}>
-      <Container className="flex h-18 items-center gap-3 sm:gap-10" variant="wide">
+      <Container className="flex h-18 items-center gap-3 sm:gap-10" variant="fluid">
         <Button
           className="-ml-2.5 gap-1 hover:bg-transparent"
           nativeButton={false}

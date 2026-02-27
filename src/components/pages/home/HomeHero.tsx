@@ -19,7 +19,7 @@ export function HomeHero(props: React.ComponentProps<'section'>) {
         loading="eager"
       />
 
-      <h1 className="mb-4 font-heading text-2xl font-semibold">
+      <h1 className="mb-4 font-heading text-xl font-semibold xs:text-2xl">
         Hey, I&apos;m <span className="border-b-[0.09375rem] border-primary">Andrei Hudovich</span>!
       </h1>
 
