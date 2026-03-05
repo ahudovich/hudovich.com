@@ -46,7 +46,7 @@ const profilePageSchema: WithContext<ProfilePage> = {
       links.social.threads,
       links.social.bluesky,
       links.social.linkedin,
-      links.social.substack,
+      links.social.github,
     ],
   },
 }

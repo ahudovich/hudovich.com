@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import {
   BlueskyIcon,
-  Bookmark01Icon,
+  GithubIcon,
   Linkedin01Icon,
   NewTwitterIcon,
   ThreadsIcon,
@@ -55,11 +55,11 @@ const socialLinks: Array<SocialLink> = [
     fill: 'text-[#0a66c2]',
   },
   {
-    slot: 'substack',
-    label: 'Substack',
-    icon: Bookmark01Icon,
-    href: links.social.substack,
-    fill: 'text-[#fe6a09]',
+    slot: 'github',
+    label: 'GitHub',
+    icon: GithubIcon,
+    href: links.social.github,
+    fill: 'text-foreground',
   },
 ] as const
 
