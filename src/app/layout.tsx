@@ -14,19 +14,15 @@ export const metadata: Metadata = {
     env.VERCEL_ENV === 'preview'
       ? new URL(`https://${env.VERCEL_URL}`)
       : new URL(env.NEXT_PUBLIC_BASE_URL),
-
   title: {
     template: `%s | ${siteMetadata.title}`,
     default: siteMetadata.title,
   },
-
   description: siteMetadata.description,
-
   openGraph: {
     title: siteMetadata.title,
     description: siteMetadata.description,
   },
-
   twitter: {
     card: 'summary_large_image',
     title: siteMetadata.title,

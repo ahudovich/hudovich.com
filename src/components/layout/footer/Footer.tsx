@@ -31,7 +31,7 @@ export function Footer({ className, ...props }: React.ComponentProps<'footer'>) 
               'transition-transform will-change-transform group-hover:scale-120'
             )}
             icon={FavouriteIcon}
-            aria-hidden="true"
+            aria-hidden={true}
           />
           <span>by Andrei</span>
         </p>
@@ -44,7 +44,7 @@ export function Footer({ className, ...props }: React.ComponentProps<'footer'>) 
               <Icon
                 className="size-3.5 shrink-0 text-foreground"
                 icon={GitForkIcon}
-                aria-hidden="true"
+                aria-hidden={true}
               />
             }
             target="_blank"

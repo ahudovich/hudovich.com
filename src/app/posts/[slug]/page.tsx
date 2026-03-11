@@ -8,7 +8,7 @@ import { Icon } from '@/components/ui/Icon'
 import { TextLink } from '@/components/ui/TextLink'
 import { env } from '@/lib/env'
 import { formatDate } from '@/lib/utils'
-import type { Metadata } from 'next'
+import type { Metadata, ResolvingMetadata } from 'next'
 import type { BlogPosting, WithContext } from 'schema-dts'
 
 const mdxComponents = {
@@ -25,8 +25,12 @@ export function generateStaticParams() {
   }))
 }
 
-export async function generateMetadata({ params }: PageProps<'/posts/[slug]'>): Promise<Metadata> {
+export async function generateMetadata(
+  { params }: PageProps<'/posts/[slug]'>,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
   const { slug } = await params
+  const resolvedParent = await parent
 
   const post = allPosts.find((item) => item._meta.path === slug)
 
@@ -34,11 +38,28 @@ export async function generateMetadata({ params }: PageProps<'/posts/[slug]'>): 
     notFound()
   }
 
+  const inheritedOgImages = resolvedParent.openGraph?.images
+  const inheritedTwitterImages = resolvedParent.twitter?.images
+  const inheritedTwitterCard = resolvedParent.twitter?.card
+
   return {
     title: post.title,
     description: post.summary,
     alternates: {
       canonical: `/posts/${post._meta.path}`,
+    },
+    openGraph: {
+      type: 'article',
+      title: post.title,
+      description: post.summary,
+      url: new URL(`/posts/${post._meta.path}`, env.NEXT_PUBLIC_BASE_URL).toString(),
+      images: inheritedOgImages,
+    },
+    twitter: {
+      card: inheritedTwitterCard,
+      title: post.title,
+      description: post.summary,
+      images: inheritedTwitterImages,
     },
   }
 }
@@ -73,12 +94,14 @@ export default async function PostPage({ params }: PageProps<'/posts/[slug]'>) {
 
       <Container>
         <article className="post">
-          <PageTitle>{post.title}</PageTitle>
+          <header className="mb-6">
+            <PageTitle className="mb-6">{post.title}</PageTitle>
 
-          <p className="my-6 flex items-center gap-2.5 text-xs">
-            <Icon className="size-3.5" icon={Calendar03Icon} />
-            <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
-          </p>
+            <p className="flex items-center gap-2.5 text-xs">
+              <Icon className="size-3.5" icon={Calendar03Icon} aria-hidden={true} />
+              <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
+            </p>
+          </header>
 
           <MDXContent code={post.mdx} components={mdxComponents} />
         </article>
