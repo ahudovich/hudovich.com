@@ -3,6 +3,7 @@ import { MDXContent } from '@content-collections/mdx/react'
 import { Calendar03Icon } from '@hugeicons/core-free-icons'
 import { allPosts } from 'content-collections'
 import { Container } from '@/components/layout/Container'
+import { PageTitle } from '@/components/layout/PageTitle'
 import { Icon } from '@/components/ui/Icon'
 import { formatDate } from '@/lib/utils'
 import type { Metadata } from 'next'
@@ -43,7 +44,7 @@ export default async function PostPage({ params }: PageProps<'/posts/[slug]'>) {
   return (
     <Container>
       <article className="post">
-        <h1>{post.title}</h1>
+        <PageTitle>{post.title}</PageTitle>
 
         <p className="my-6 flex items-center gap-2.5 text-xs">
           <Icon className="size-3.5" icon={Calendar03Icon} />

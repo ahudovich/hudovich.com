@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Calendar03Icon, Mail01Icon } from '@hugeicons/core-free-icons'
 import { IconFlagPoland } from '@/components/icons/IconFlagPoland'
+import { PageTitle } from '@/components/layout/PageTitle'
 import { buttonVariants } from '@/components/ui/Button'
 import { Icon } from '@/components/ui/Icon'
 import { links } from '@/data/links.json'
@@ -19,9 +20,9 @@ export function HomeHero(props: React.ComponentProps<'section'>) {
         loading="eager"
       />
 
-      <h1 className="mb-4 font-heading text-xl font-semibold text-foreground xs:text-2xl">
+      <PageTitle className="mb-4 text-xl xs:text-2xl">
         Hey, I&apos;m <span className="border-b-[0.09375rem] border-primary">Andrei Hudovich</span>!
-      </h1>
+      </PageTitle>
 
       <div className="mb-5 space-y-3 leading-relaxed text-pretty sm:space-y-2">
         <p>

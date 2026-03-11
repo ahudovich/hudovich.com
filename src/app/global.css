@@ -102,15 +102,10 @@
       @apply my-[1.25em];
     }
 
-    h1,
     h2,
     h3,
     h4 {
       @apply text-foreground font-heading font-semibold;
-    }
-
-    h1 {
-      @apply text-2xl;
     }
 
     h2 {

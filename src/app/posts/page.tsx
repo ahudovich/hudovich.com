@@ -1,5 +1,6 @@
 import { allPosts } from 'content-collections'
 import { Container } from '@/components/layout/Container'
+import { PageTitle } from '@/components/layout/PageTitle'
 import { PostCard } from '@/components/posts/PostCard'
 import type { Metadata } from 'next'
 
@@ -14,7 +15,7 @@ export default function PostsPage() {
   return (
     <Container>
       <section>
-        <h1 className="mb-4 font-heading text-2xl font-semibold text-foreground">All posts</h1>
+        <PageTitle className="mb-4">All posts</PageTitle>
 
         {allPosts.length === 0 ? (
           <p>No posts yet.</p>
