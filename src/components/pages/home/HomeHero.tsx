@@ -20,7 +20,7 @@ export function HomeHero(props: React.ComponentProps<'section'>) {
         loading="eager"
       />
 
-      <PageTitle className="mb-4 text-xl xs:text-2xl">
+      <PageTitle className="mb-4">
         Hey, I&apos;m <span className="border-b-[0.09375rem] border-primary">Andrei Hudovich</span>!
       </PageTitle>
 
