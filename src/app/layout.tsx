@@ -5,6 +5,7 @@ import { ThemeProvider } from 'next-themes'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Footer } from '@/components/layout/footer/Footer'
 import { Header } from '@/components/layout/header/Header'
+import { TooltipProvider } from '@/components/ui/Tooltip'
 import { siteMetadata } from '@/data/metadata.json'
 import { env } from '@/lib/env'
 import type { Metadata } from 'next'
@@ -49,9 +50,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           enableSystem={true}
           disableTransitionOnChange={true}
         >
-          <Header />
-          <main className="pt-8 pb-12 sm:pt-12 sm:pb-18">{children}</main>
-          <Footer />
+          <TooltipProvider>
+            <Header />
+            <main className="pt-8 pb-12 sm:pt-12 sm:pb-18">{children}</main>
+            <Footer />
+          </TooltipProvider>
 
           {/* Vercel Speed Insights */}
           <SpeedInsights />
