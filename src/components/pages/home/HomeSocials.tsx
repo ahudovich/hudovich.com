@@ -68,7 +68,7 @@ export function HomeSocials() {
     <section>
       <SectionHeader>
         <SectionHeaderTitle>Find me on</SectionHeaderTitle>
-        <SectionHeaderText>You can find me on the following social platforms:</SectionHeaderText>
+        <SectionHeaderText>You can find me on the following platforms:</SectionHeaderText>
       </SectionHeader>
 
       <ul className="flex flex-wrap items-center gap-2.5">
