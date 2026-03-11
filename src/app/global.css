@@ -121,11 +121,11 @@
     }
 
     blockquote {
-      @apply pl-4 border-l-4;
+      @apply pl-4 border-l-4 border-foreground/20;
     }
 
     hr {
-      @apply my-8;
+      @apply my-8 h-px bg-foreground/20 border-0;
     }
 
     ul > li,
@@ -144,7 +144,7 @@
 
     ul > li::before {
       content: '';
-      @apply top-2.5 size-1.5 rounded-full bg-current;
+      @apply top-2.5 size-1.5 rounded-full bg-foreground/20;
     }
 
     ol > li {
