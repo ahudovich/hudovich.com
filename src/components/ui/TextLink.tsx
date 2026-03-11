@@ -2,13 +2,17 @@ import Link from 'next/link'
 import { cn } from '@/lib/utils'
 
 export function TextLink({
+  className,
   children,
   icon,
   ...props
 }: { icon?: React.ReactNode } & React.ComponentProps<typeof Link>) {
   return (
     <Link
-      className="group/text-link inline-flex items-center gap-1 font-medium text-foreground"
+      className={cn(
+        'group/text-link inline-flex items-center gap-1 font-medium text-foreground',
+        className
+      )}
       {...props}
     >
       <span

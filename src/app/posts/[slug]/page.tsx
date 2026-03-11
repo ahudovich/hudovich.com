@@ -5,10 +5,19 @@ import { allPosts } from 'content-collections'
 import { Container } from '@/components/layout/Container'
 import { PageTitle } from '@/components/layout/PageTitle'
 import { Icon } from '@/components/ui/Icon'
+import { TextLink } from '@/components/ui/TextLink'
 import { env } from '@/lib/env'
 import { formatDate } from '@/lib/utils'
 import type { Metadata } from 'next'
 import type { BlogPosting, WithContext } from 'schema-dts'
+
+const mdxComponents = {
+  a: ({ href, children, ...props }: React.ComponentProps<'a'>) => (
+    <TextLink className="[&>span]:after:bottom-0" href={href as string} {...props}>
+      {children}
+    </TextLink>
+  ),
+}
 
 export function generateStaticParams() {
   return allPosts.map((post) => ({
@@ -71,7 +80,7 @@ export default async function PostPage({ params }: PageProps<'/posts/[slug]'>) {
             <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
           </p>
 
-          <MDXContent code={post.mdx} />
+          <MDXContent code={post.mdx} components={mdxComponents} />
         </article>
       </Container>
     </>
