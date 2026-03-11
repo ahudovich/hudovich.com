@@ -5,8 +5,10 @@ import { allPosts } from 'content-collections'
 import { Container } from '@/components/layout/Container'
 import { PageTitle } from '@/components/layout/PageTitle'
 import { Icon } from '@/components/ui/Icon'
+import { env } from '@/lib/env'
 import { formatDate } from '@/lib/utils'
 import type { Metadata } from 'next'
+import type { BlogPosting, WithContext } from 'schema-dts'
 
 export function generateStaticParams() {
   return allPosts.map((post) => ({
@@ -41,18 +43,37 @@ export default async function PostPage({ params }: PageProps<'/posts/[slug]'>) {
     notFound()
   }
 
+  const blogPostingSchema: WithContext<BlogPosting> = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    url: new URL(`/posts/${post._meta.path}`, env.NEXT_PUBLIC_BASE_URL).toString(),
+    datePublished: post.publishedAt,
+    author: {
+      '@type': 'Person',
+      name: 'Andrei Hudovich',
+    },
+  }
+
   return (
-    <Container>
-      <article className="post">
-        <PageTitle>{post.title}</PageTitle>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+      />
 
-        <p className="my-6 flex items-center gap-2.5 text-xs">
-          <Icon className="size-3.5" icon={Calendar03Icon} />
-          <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
-        </p>
+      <Container>
+        <article className="post">
+          <PageTitle>{post.title}</PageTitle>
 
-        <MDXContent code={post.mdx} />
-      </article>
-    </Container>
+          <p className="my-6 flex items-center gap-2.5 text-xs">
+            <Icon className="size-3.5" icon={Calendar03Icon} />
+            <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
+          </p>
+
+          <MDXContent code={post.mdx} />
+        </article>
+      </Container>
+    </>
   )
 }
