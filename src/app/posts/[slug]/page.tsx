@@ -13,7 +13,7 @@ import type { BlogPosting, WithContext } from 'schema-dts'
 
 const mdxComponents = {
   a: ({ href, children, ...props }: React.ComponentProps<'a'>) => (
-    <TextLink className="[&>span]:after:bottom-0" href={href as string} {...props}>
+    <TextLink className="[&>span]:after:bottom-0.5" href={href as string} {...props}>
       {children}
     </TextLink>
   ),
@@ -97,7 +97,7 @@ export default async function PostPage({ params }: PageProps<'/posts/[slug]'>) {
           <header className="mb-6">
             <PageTitle className="mb-6">{post.title}</PageTitle>
 
-            <p className="flex items-center gap-2.5 text-xs">
+            <p className="flex items-center gap-2 text-sm">
               <Icon className="size-3.5" icon={Calendar03Icon} aria-hidden={true} />
               <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
             </p>
