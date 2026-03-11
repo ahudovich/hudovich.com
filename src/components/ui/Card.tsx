@@ -26,7 +26,7 @@ export function CardHeader({ className, ...props }: React.ComponentProps<'div'>)
   return (
     <div
       className={cn(
-        'flex items-center gap-2 group-has-data-[slot=card-indicator]/card:pr-8',
+        'flex flex-col gap-2 group-has-data-[slot=card-indicator]/card:pr-8',
         className
       )}
       data-slot="card-header"

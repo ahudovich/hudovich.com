@@ -49,24 +49,26 @@ export function HomeProjects() {
         {projects.map((project) => (
           <Card key={project.name} render={<article />}>
             <CardHeader>
-              <div className="shrink-0 rounded-sm border border-border bg-muted/50 p-0.75 *:size-4">
-                {project.icon}
+              <div className="flex items-center gap-2">
+                <div className="shrink-0 rounded-sm border border-border bg-muted/50 p-0.75 *:size-4">
+                  {project.icon}
+                </div>
+
+                <CardTitle>
+                  <Link
+                    className="after:absolute after:inset-0"
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {project.name}
+                  </Link>
+                </CardTitle>
+
+                <Badge variant={statusLabels[project.status].variant} size="sm">
+                  {statusLabels[project.status].label}
+                </Badge>
               </div>
-
-              <CardTitle>
-                <Link
-                  className="after:absolute after:inset-0"
-                  href={project.link}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {project.name}
-                </Link>
-              </CardTitle>
-
-              <Badge variant={statusLabels[project.status].variant} size="sm">
-                {statusLabels[project.status].label}
-              </Badge>
             </CardHeader>
 
             <CardContent>
