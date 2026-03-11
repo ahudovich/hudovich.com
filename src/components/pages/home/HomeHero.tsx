@@ -24,7 +24,7 @@ export function HomeHero(props: React.ComponentProps<'section'>) {
         Hey, I&apos;m <span className="border-b-[0.09375rem] border-primary">Andrei Hudovich</span>!
       </PageTitle>
 
-      <div className="mb-5 space-y-3 leading-relaxed text-pretty sm:space-y-2">
+      <div className="mb-5 space-y-3 leading-relaxed text-pretty text-foreground sm:space-y-2">
         <p>
           A senior software engineer based in Wroclaw,&nbsp;Poland
           <IconFlagPoland
