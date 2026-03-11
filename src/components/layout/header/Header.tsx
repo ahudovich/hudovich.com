@@ -15,7 +15,7 @@ export function Header(props: React.ComponentProps<'header'>) {
           render={
             <Link href="/" aria-label="Home">
               <Logo className="size-5.5 shrink-0 text-primary" />
-              <span className="translate-y-px text-lg leading-none font-bold tracking-wider">
+              <span className="translate-y-px text-lg leading-none font-bold tracking-wider text-foreground">
                 AH
               </span>
             </Link>
