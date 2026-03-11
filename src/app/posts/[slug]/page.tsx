@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import { MDXContent } from '@content-collections/mdx/react'
 import { Calendar03Icon } from '@hugeicons/core-free-icons'
 import { allPosts } from 'content-collections'
+import { format, parseISO } from 'date-fns'
 import { Container } from '@/components/layout/Container'
 import { Icon } from '@/components/ui/Icon'
 import type { Metadata } from 'next'
@@ -39,14 +40,16 @@ export default async function PostPage({ params }: PageProps<'/posts/[slug]'>) {
     notFound()
   }
 
+  const publishedAtFormatted = format(parseISO(post.publishedAt), 'MMMM d, yyyy')
+
   return (
     <Container>
       <article className="post">
         <h1>{post.title}</h1>
 
-        <p className="my-6 flex items-center gap-2 text-xs text-muted-foreground">
+        <p className="my-6 flex items-center gap-2.5 text-xs">
           <Icon className="size-3.5" icon={Calendar03Icon} />
-          <time dateTime={post.publishedAt}>{post.publishedAt}</time>
+          <time dateTime={post.publishedAt}>{publishedAtFormatted}</time>
         </p>
 
         <MDXContent code={post.mdx} />
