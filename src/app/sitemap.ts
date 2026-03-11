@@ -2,6 +2,8 @@ import { allPosts } from 'content-collections'
 import { env } from '@/lib/env'
 import type { MetadataRoute } from 'next'
 
+const today = new Date().toISOString().split('T')[0]
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = allPosts.map((post) => {
     return {
@@ -15,13 +17,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: env.NEXT_PUBLIC_BASE_URL,
-      lastModified: new Date().toISOString().split('T')[0],
+      lastModified: today,
       changeFrequency: 'monthly',
       priority: 1,
     },
     {
       url: new URL('/posts', env.NEXT_PUBLIC_BASE_URL).toString(),
-      lastModified: posts[0].lastModified,
+      lastModified: posts[0]?.lastModified ?? today,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
