@@ -2,9 +2,9 @@
 
 import { useTheme } from 'next-themes'
 import { useState } from 'react'
-import { useHotkeys } from 'react-hotkeys-hook'
 import { useMount } from 'react-use'
 import { Moon02Icon, Sun03Icon } from '@hugeicons/core-free-icons'
+import { useHotkey } from '@tanstack/react-hotkeys'
 import { Button } from '@/components/ui/Button'
 import { Icon } from '@/components/ui/Icon'
 import { Kbd } from '@/components/ui/Kbd'
@@ -20,7 +20,7 @@ export function HeaderThemeToggle({ className, ...props }: React.ComponentProps<
     setIsMounted(true)
   })
 
-  useHotkeys('t', () => toggleTheme(), [resolvedTheme])
+  useHotkey('T', () => toggleTheme())
 
   function toggleTheme() {
     setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
