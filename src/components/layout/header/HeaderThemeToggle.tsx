@@ -7,6 +7,8 @@ import { useMount } from 'react-use'
 import { Moon02Icon, Sun03Icon } from '@hugeicons/core-free-icons'
 import { Button } from '@/components/ui/Button'
 import { Icon } from '@/components/ui/Icon'
+import { Kbd } from '@/components/ui/Kbd'
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/Tooltip'
 import { cn } from '@/lib/utils'
 
 export function HeaderThemeToggle({ className, ...props }: React.ComponentProps<typeof Button>) {
@@ -25,18 +27,28 @@ export function HeaderThemeToggle({ className, ...props }: React.ComponentProps<
   }
 
   return (
-    <Button
-      className={cn(isMounted ? 'visible' : 'pointer-events-none invisible', className)}
-      variant="ghost"
-      size="icon"
-      tabIndex={isMounted ? undefined : -1}
-      aria-hidden={isMounted ? undefined : true}
-      onClick={toggleTheme}
-      {...props}
-    >
-      <span className="sr-only">Toggle theme</span>
-      <Icon className="dark:hidden" icon={Moon02Icon} />
-      <Icon className="hidden dark:block" icon={Sun03Icon} />
-    </Button>
+    <Tooltip>
+      <TooltipTrigger
+        render={
+          <Button
+            className={cn(isMounted ? 'visible' : 'pointer-events-none invisible', className)}
+            variant="ghost"
+            size="icon"
+            tabIndex={isMounted ? undefined : -1}
+            aria-hidden={isMounted ? undefined : true}
+            onClick={toggleTheme}
+            {...props}
+          />
+        }
+      >
+        <span className="sr-only">Toggle theme</span>
+        <Icon className="dark:hidden" icon={Moon02Icon} />
+        <Icon className="hidden dark:block" icon={Sun03Icon} />
+      </TooltipTrigger>
+
+      <TooltipContent>
+        Toggle theme <Kbd>T</Kbd>
+      </TooltipContent>
+    </Tooltip>
   )
 }
