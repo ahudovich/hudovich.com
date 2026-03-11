@@ -14,7 +14,7 @@ export default function PostsPage() {
   return (
     <Container>
       <section>
-        <h1 className="mb-4 font-heading text-2xl font-semibold">All posts</h1>
+        <h1 className="mb-4 font-heading text-2xl font-semibold text-foreground">All posts</h1>
 
         {allPosts.length === 0 ? (
           <p>No posts yet.</p>
