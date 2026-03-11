@@ -13,7 +13,7 @@
   --secondary: oklch(0.967 0.001 286.375); /* zinc-100 */
   --secondary-foreground: oklch(0.141 0.005 285.823); /* zinc-950 */
   --muted: oklch(0.967 0.001 286.375); /* zinc-100 */
-  --muted-foreground: oklch(0.552 0.016 285.938); /* zinc-500 */
+  --muted-foreground: oklch(0.442 0.017 285.786); /* zinc-600 */
   --destructive: oklch(0.577 0.245 27.325); /* red-600 */
 
   --card: oklch(1 0 0); /* white */
@@ -34,7 +34,7 @@
   --secondary: oklch(0.274 0.006 286.033); /* zinc-800 */
   --secondary-foreground: oklch(0.985 0 0); /* zinc-50 */
   --muted: oklch(0.274 0.006 286.033); /* zinc-800 */
-  --muted-foreground: oklch(0.69 0.006 286.286); /* custom (based on foreground) */
+  --muted-foreground: oklch(0.785 0.006 286.286); /* custom (based on foreground) */
   --destructive: oklch(0.704 0.191 22.216); /* red-400 */
 
   --card: oklch(0.215 0.0194 280.25); /* custom (based on background) */
@@ -91,5 +91,78 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+  }
+}
+
+@layer components {
+  .post {
+    @apply leading-[1.75];
+
+    > * + * {
+      @apply my-[1.25em];
+    }
+
+    h2,
+    h3,
+    h4 {
+      @apply text-foreground font-heading font-semibold;
+    }
+
+    h2 {
+      @apply text-xl;
+    }
+
+    h3 {
+      @apply text-lg;
+    }
+
+    h4 {
+      @apply text-base;
+    }
+
+    blockquote {
+      @apply pl-4 border-l-4 border-foreground/20;
+    }
+
+    hr {
+      @apply my-8 h-px bg-foreground/20 border-0;
+    }
+
+    ul > li,
+    ol > li {
+      @apply relative pl-6 sm:pl-12;
+    }
+
+    ol {
+      counter-reset: post-list-item;
+    }
+
+    ul > li::before,
+    ol > li::before {
+      @apply absolute left-0 text-current sm:left-5;
+    }
+
+    ul > li::before {
+      content: '';
+      @apply top-2.5 size-1.5 rounded-full bg-foreground/20;
+    }
+
+    ol > li {
+      counter-increment: post-list-item;
+    }
+
+    ol > li::before {
+      content: counter(post-list-item) '.';
+      @apply top-0;
+    }
+
+    ul > li + li,
+    ol > li + li {
+      @apply mt-2;
+    }
+
+    strong {
+      @apply text-foreground font-semibold;
+    }
   }
 }

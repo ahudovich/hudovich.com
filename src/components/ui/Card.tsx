@@ -26,7 +26,7 @@ export function CardHeader({ className, ...props }: React.ComponentProps<'div'>)
   return (
     <div
       className={cn(
-        'flex items-center gap-2 group-has-data-[slot=card-indicator]/card:pr-8',
+        'flex flex-col gap-2 group-has-data-[slot=card-indicator]/card:pr-8',
         className
       )}
       data-slot="card-header"
@@ -37,7 +37,7 @@ export function CardHeader({ className, ...props }: React.ComponentProps<'div'>)
 
 export function CardTitle({ className, render, ...props }: useRender.ComponentProps<'h2'>) {
   const defaultProps: useRender.ElementProps<'h2'> = {
-    className: cn('font-heading text-base font-medium', className),
+    className: cn('font-heading text-base font-medium text-foreground', className),
   }
 
   return useRender({

@@ -15,19 +15,15 @@ export const metadata: Metadata = {
     env.VERCEL_ENV === 'preview'
       ? new URL(`https://${env.VERCEL_URL}`)
       : new URL(env.NEXT_PUBLIC_BASE_URL),
-
   title: {
     template: `%s | ${siteMetadata.title}`,
     default: siteMetadata.title,
   },
-
   description: siteMetadata.description,
-
   openGraph: {
     title: siteMetadata.title,
     description: siteMetadata.description,
   },
-
   twitter: {
     card: 'summary_large_image',
     title: siteMetadata.title,
@@ -43,7 +39,7 @@ const geistMono = Geist_Mono({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html className={`${geistMono.variable}`} lang="en" suppressHydrationWarning>
-      <body className="h-dvh bg-background font-base text-base text-foreground antialiased">
+      <body className="h-dvh bg-background font-base text-base text-muted-foreground antialiased">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
