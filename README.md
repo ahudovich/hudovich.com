@@ -21,8 +21,6 @@
     <a href="https://bsky.app/profile/hudovich.com">Bluesky</a>
     &middot;
     <a href="https://www.linkedin.com/in/ahudovich/">LinkedIn</a>
-    &middot;
-    <a href="https://substack.com/@ahudovich">Substack</a>
   </p>
 </div>
 
@@ -34,6 +32,7 @@
 - [Shadcn UI](https://ui.shadcn.com)
 - [Base UI](https://base-ui.com)
 - [Tailwindcss](https://tailwindcss.com)
+- [Content Collections](https://www.content-collections.dev) for blog posts
 
 ## License
 
